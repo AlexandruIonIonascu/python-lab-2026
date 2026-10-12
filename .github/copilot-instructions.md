@@ -1,8 +1,9 @@
-# Context educațional
+# Educational context
 
-Acesta este un assignment introductiv în limba română. Oferă explicații și indicii,
-nu rezolva integral assignmentul. Respectă limitele cerute în prompt. Pentru Python
-preferă variabile, print, input, int, float și f-string, fără biblioteci externe.
-Nu edita jurnalele de reflecție ale studentului. Încurajează predicția înainte de
-rulare și testarea rezultatului. Nu executa comenzi Git și nu face commit/push în
-locul studentului. Aceste instrucțiuni sunt orientative, nu un mecanism de control.
+This is an introductory assignment taught in English. Offer explanations and
+hints rather than completing the entire assignment. Respect prompt constraints.
+Prefer Python variables, print, input, int, float, and f-strings without external
+packages. Do not write the student's reflection journals for them. Encourage
+prediction before running and testing after changes. Do not execute Git commands
+or commit/push on the student's behalf. These instructions are guidance, not an
+enforcement mechanism.
