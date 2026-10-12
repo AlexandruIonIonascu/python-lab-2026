@@ -1,2 +1,2 @@
-# Eroare intenționată. Citește mesajul, apoi corectează minim.
-print("Incep depanarea"
+# Intentional error. Read the error message, then make a minimal fix.
+print("Starting debugging"

@@ -1,3 +1,3 @@
-# Eroare intenționată. Ce nume a fost definit?
-mesaj = "Invat Python"
-print(mesajj)
+# Intentional error. Which name has been defined?
+message = "Learning Python"
+print(messsage)
