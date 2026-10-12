@@ -1,61 +1,63 @@
-# Terminalul: unde dai comenzi și vezi rezultatele
+# The terminal: commands in, results out
 
-Terminalul este interfața text. În el rulează un **shell** (în acest laborator Bash),
-care citește comenzile și pornește programe precum Python sau Git.
-Editorul modifică fișiere; terminalul execută comenzi. Terminalul nu este un fișier Python.
+The terminal is a text interface. A **shell**, Bash in these labs, runs inside it,
+reads your commands, and starts programs such as Python and Git.
+The editor changes files; the terminal runs commands. A terminal is not a Python source file.
 
-Deschide **Terminal → New Terminal** în Codespaces. Linia care așteaptă o comandă
-se numește prompt. Nu copia semnele `$` sau `>>>` din exemple de pe internet.
-În ghidurile noastre comenzile se copiază fără astfel de semne.
+Open **Terminal → New Terminal** in Codespaces. The line waiting for a command
+is called the prompt. Do not copy `$` or `>>>` prompt symbols from online examples.
+The command blocks in these guides do not include those symbols.
 
-| Comandă | Ce face | Ce observi |
+| Command | What it does | What you should observe |
 | --- | --- | --- |
-| `pwd` | Arată directorul curent | O cale precum `/workspaces/python-lab-2026-COD` |
-| `ls` | Listează fișierele vizibile | `app.py`, ghiduri, foldere |
-| `ls -a` | Include numele care încep cu punct | `.git`, `.gitignore`, `.devcontainer` |
-| `cd dovezi` | Intră în folder | Următorul `pwd` se schimbă |
-| `cd ..` | Revine în folderul părinte | Ești iar în rădăcina proiectului |
-| `mkdir -p dovezi` | Creează folderul dacă lipsește | Nu afișează neapărat un mesaj |
-| `cat app.py` | Afișează sursa ca text | Nu execută Python |
-| `python --version` | Cere versiunea interpretorului | În mediul configurat: Python 3.12.x |
-| `python app.py` | Execută fișierul prin Python | Mesajele produse de program |
-| `git status` | Arată starea Git | Modificări și relația cu branch-ul remote |
+| `pwd` | Shows the current directory | A path such as `/workspaces/python-lab-2026-CODE` |
+| `ls` | Lists visible files and folders | `app.py`, guides, folders |
+| `ls -a` | Also lists names starting with a dot | `.git`, `.gitignore`, `.devcontainer` |
+| `cd dovezi` | Enters the evidence folder | The next `pwd` shows a different path |
+| `cd ..` | Moves to the parent folder | You are back at the repository root |
+| `mkdir -p dovezi` | Creates the folder if needed | It may produce no message |
+| `cat app.py` | Displays the source as text | It does not execute Python |
+| `python --version` | Requests the interpreter version | Python 3.12.x in the configured environment |
+| `python app.py` | Runs the file using Python | Messages produced by the program |
+| `git status` | Reports the Git state | File changes and branch/remote information |
 
-## Shell sau Python?
+## Shell commands or Python code?
 
-În shell scrii `python app.py`, `pwd` sau `git status`.
-În `app.py` scrii `print("Salut!")`. `print` este o funcție Python;
-`print("Salut!")` scris direct în Bash poate da eroare de sintaxă.
+In the shell, enter `python app.py`, `pwd`, or `git status`.
+In `app.py`, write `print("Hello!")`. `print` is a Python function;
+typing `print("Hello!")` directly into Bash may produce a syntax error.
 
-Comanda `python` fără numele fișierului deschide interpretorul interactiv (REPL).
-La promptul `>>>` poți scrie expresii Python, dar `git status` nu este Python.
-Scrie `exit()` pentru a reveni în shell. `Ctrl+C` întrerupe un program care rulează;
-pentru o aplicație care așteaptă `input`, introdu răspunsul sau întrerupe cu `Ctrl+C`.
+Running `python` without a filename starts the interactive interpreter (REPL).
+At the `>>>` prompt you can enter Python expressions, but `git status` is not
+Python code. Enter `exit()` to return to the shell. `Ctrl+C` interrupts a running
+program. If a program is waiting for `input`, type a response and press Enter,
+or interrupt it with `Ctrl+C`.
 
-## Redirecționarea output-ului
+## Redirecting output
 
-Din rădăcina repository-ului:
+From the repository root:
 
 ```bash
 python app.py > dovezi/output_lab1.txt
 cat dovezi/output_lab1.txt
 ```
 
-`>` este interpretat de shell și scrie output-ul standard în fișier. Suprascrie
-fișierul dacă există. Programul a rulat chiar dacă mesajele nu au apărut pe ecran.
-Fișierul nu ajunge pe GitHub până nu îl adaugi, faci commit și push.
-Erorile pot apărea în continuare în terminal, fiind scrise pe fluxul de erori.
+The shell interprets `>` and writes standard output to a file, replacing that
+file's previous contents if it exists. The program has run even though its
+messages did not appear on screen. Errors may still appear in the terminal
+because they use a separate error stream. The output file reaches GitHub only
+after you add it, commit, and push.
 
-## Exercițiul de navigare
+## Navigation exercise
 
-Rulează `pwd`, `ls`, `ls -a`, `cd dovezi`, `pwd`, `cd ..` și `pwd`.
-Completează jurnalul cu ce s-a schimbat. Creează un fișier din shell:
+Run `pwd`, `ls`, `ls -a`, `cd dovezi`, `pwd`, `cd ..`, and `pwd`.
+Record what changed in your journal. Create a file from the shell:
 
 ```bash
-printf 'Am creat acest fisier din terminal.\n' > dovezi/terminal.txt
+printf 'I created this file from the terminal.\n' > dovezi/terminal.txt
 cat dovezi/terminal.txt
 git status --short
 ```
 
-`printf` este aici o comandă a shell-ului; nu este funcția Python `print`.
-Observă fișierul și în Explorer. Nu folosi comenzi de ștergere recursive în acest laborator.
+Here, `printf` is a shell command, not Python's `print` function. Find the new
+file in Explorer as well. Do not use recursive deletion commands in these labs.

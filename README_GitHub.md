@@ -1,52 +1,51 @@
-# Git, GitHub și predarea codului
+# Git, GitHub, and submitting your code
 
-**Git** urmărește versiunile proiectului. **GitHub** găzduiește repository-ul remote
-și permite citirea codului și a istoricului. **Codespaces** este mediul de lucru
-din cloud cu o copie a repository-ului și un istoric Git local.
-„Local” în comenzile Git înseamnă aici în Codespaces, nu pe laptopul tău.
+**Git** tracks versions of your project. **GitHub** hosts the remote repository
+and lets others read its code and history. **Codespaces** is your cloud development
+environment, containing a working copy of the repository and local Git history.
+In these labs, “local” means inside your Codespace, not on your laptop.
 
-## Ce înseamnă o modificare
+## Where is your change?
 
-| Stare | Unde este modificarea? | O vede profesorul pe GitHub? |
+| State | Where is the change? | Can the instructor see it on GitHub? |
 | --- | --- | --- |
-| Ai tastat, fără Save | În editor | Nu |
-| Ai salvat fișierul | În copia din Codespaces | Nu |
-| Ai folosit `git add` | În staging: selecția pentru următorul commit | Nu |
-| Ai făcut commit | În istoricul Git din Codespaces | Nu, încă |
-| Ai făcut push | Și în repository-ul GitHub | Da, dacă are acces |
+| Typed, not saved | In the editor | No |
+| Saved | In the Codespace's working copy | No |
+| Added with `git add` | In staging: the selection for the next commit | No |
+| Committed | In the Codespace's Git history | Not yet |
+| Pushed | Also in the GitHub repository | Yes, if they have access |
 
-`main` este branch-ul folosit pentru predare. `origin` este numele convențional
-al repository-ului remote. `origin/main` reprezintă starea remote cunoscută de Git.
-Un commit are un identificator SHA și un mesaj. Mesajul explică schimbarea:
-`Completeaza experimentele print` este mai util decât `update`.
+`main` is the submission branch. `origin` is the usual name for your remote
+repository. `origin/main` records the remote branch state known to Git.
+A commit has a SHA identifier and a message. Use a message that describes the
+change: `Complete print experiments` is more helpful than `update`.
 
-## Ciclu de lucru în terminal
+## Working cycle in the terminal
 
-1. Salvează fișierele: **File → Save All** sau `Ctrl+S` pentru fișierul curent.
-2. Din rădăcina proiectului inspectează:
+1. Save your files: **File → Save All**, or `Ctrl+S` for the current file.
+2. From the repository root, inspect your changes:
 
 ```bash
 git status
 git diff
 ```
 
-3. Selectează fișierele cerute; exemplu pentru primul checkpoint:
+3. Select the required files. For the first checkpoint:
 
 ```bash
 git add app.py raspunsuri/lab1.md dovezi/terminal.txt
 git diff --staged
-git commit -m "Configureaza mediul si adauga salutul personal"
+git commit -m "Set up the environment and add a personal greeting"
 git push origin main
 ```
 
-Folosește comanda de `git add` potrivită checkpoint-ului. La ultimul checkpoint
-din laboratorul 1 adaugi și `dovezi/output_lab1.txt`. `git diff --staged` arată ce
-va intra în commit. Fișierele noi apar întâi ca „untracked”; în `git status --short`,
-`??` indică un fișier neadăugat, ` M` o modificare neselectată, `M ` una în staging.
-`git diff` arată schimbările neadăugate din fișiere urmărite, nu conținutul tuturor
-fișierelor noi.
+Use the `git add` command for your current checkpoint. The final Lab 1 checkpoint
+also includes `dovezi/output_lab1.txt`. `git diff --staged` shows what will enter
+the commit. New files start as “untracked”. In `git status --short`, `??` means
+untracked, ` M` means an unstaged modification, and `M ` means staged.
+`git diff` shows unstaged changes to tracked files, not the contents of every new file.
 
-4. Verifică:
+4. Verify:
 
 ```bash
 git status
@@ -55,29 +54,29 @@ git rev-parse HEAD
 git remote -v
 ```
 
-Un working tree curat **nu dovedește singur push-ul**. Poți avea commit-uri locale
-care nu au ajuns pe GitHub. Deschide repository-ul în browser și confirmă SHA-ul
-ultimului commit, apoi deschide `app.py` și citește modificarea.
+A clean working tree **does not prove that you pushed**. You may still have local
+commits that are missing from GitHub. Open your repository in the browser, compare
+the latest commit SHA, then open `app.py` and read the change there.
 
-## Varianta cu interfața Source Control
+## Using Source Control in the editor
 
-În Codespaces, deschide Source Control, inspectează diff-ul, apasă `+` la fișierele
-cerute (stage), scrie mesajul, apoi **Commit** și **Push / Sync Changes**.
-Sync poate face și pull, și push. În acest laborator folosești terminalul cel puțin
-o dată pentru fiecare operație, ca să poți explica ce s-a întâmplat.
+Open Source Control in Codespaces, inspect the diff, click `+` beside the required
+files to stage them, enter a message, then **Commit** and **Push / Sync Changes**.
+Sync may both pull and push. In these labs, use the terminal for each operation
+at least once so you can explain the process.
 
-## Template, fork și pull request
+## Template, fork, and pull request
 
-Din template creezi un repository independent cu fișierele de pornire și un
-istoric nou. Un fork păstrează legătura și istoricul proiectului părinte.
-Pentru acest assignment folosim **Use this template**, nu Fork.
-Actualizările template-ului nu se propagă automat în copiile studenților.
-Un pull request propune integrarea unui branch în alt branch; nu este necesar
-pentru predarea de bază. În laboratorul 2 există o variantă opțională în copia ta.
+A template creates an independent repository with the starting files and a new
+history. A fork keeps the connection to, and history of, its parent repository.
+Use **Use this template**, not Fork, for this assignment.
+Template changes do not automatically propagate to student copies.
+A pull request proposes merging one branch into another. It is not required
+for the basic submission; Lab 2 includes an optional exercise in your own copy.
 
 ## `.gitignore`
 
-Acest fișier îi spune lui Git ce fișiere noi să ignore, de exemplu `.venv/`,
-`__pycache__/`, `.env` și `*.local.txt`. Nu ascunde automat un fișier deja urmărit.
-Fișierele din `dovezi/` trebuie predate și nu sunt ignorate. Nu încărca parole,
-tokenuri, documente de identitate sau datele colegilor în repository.
+This file tells Git which new files to ignore, such as `.venv/`, `__pycache__/`,
+`.env`, and `*.local.txt`. It does not automatically stop tracking files already
+in Git. The files in `dovezi/` are submission evidence and are not ignored.
+Do not commit passwords, tokens, identity documents, or classmates' personal data.

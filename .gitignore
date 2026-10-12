@@ -1,12 +1,12 @@
-# Fișiere generate de Python
+# Python-generated files
 __pycache__/
 *.py[cod]
-# Medii virtuale și cache
+# Virtual environments and caches
 .venv/
 venv/
 .pytest_cache/
-# Secrete și experimente locale
+# Secrets and local experiments
 .env
 .env.*
 *.local.txt
-# Dovezile din dovezi/ NU sunt ignorate.
+# Submission evidence in dovezi/ is NOT ignored.

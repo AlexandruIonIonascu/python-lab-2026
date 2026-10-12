@@ -1,5 +1,5 @@
-# Laboratorul 2: calculator de cost în terminal.
-# TODO: citește aliasul, cantitatea și prețul unitar.
-# TODO: convertește datele numerice, calculează și afișează totalul.
-# Cerința exactă și testele sunt în LAB_02.md.
-print("Calculatorul nu este implementat inca.")
+# Lab 2: a terminal cost calculator.
+# TODO: read the alias, quantity, and unit price.
+# TODO: convert the numeric inputs, calculate, and display the total.
+# See LAB_02.md for the exact requirements and tests.
+print("The calculator is not implemented yet.")

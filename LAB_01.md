@@ -1,23 +1,23 @@
-# Laboratorul 1 — scriu, rulez, explic și predau (90 minute)
+# Lab 1 — write, run, explain, and submit (90 minutes)
 
-Lucrezi fără Copilot și fără alte generatoare AI. Profesorul te poate ajuta cu
-instalarea și comenzile, dar predicțiile și explicațiile îți aparțin.
-Ține deschis `raspunsuri/lab1.md` și completează-l în timpul exercițiilor.
+Work without Copilot or other AI code generators. Your instructor can help with
+setup and commands, but the predictions and explanations must be your own.
+Keep `raspunsuri/lab1.md` open and complete it while you work.
 
-| Minute | Activitate | Checkpoint |
+| Minutes | Activity | Checkpoint |
 | --- | --- | --- |
-| 0–8 | Diferența GitHub / Codespace / editor / terminal | Identifici cele patru componente |
-| 8–23 | Copie privată, acces profesor, Codespace, extensia Python | Remote corect și Python funcțional |
-| 23–35 | Navigare și fișier creat în terminal | `dovezi/terminal.txt` |
-| 35–48 | Primul program și primul commit + push | Commit 1 vizibil în browser |
-| 48–70 | Experimente `print`: prezic → rulez → explic | Program și tabel de observații |
-| 70–80 | `.gitignore`, output într-un fișier, verificare locală | Dovezi și jurnal complet |
-| 80–90 | Al doilea commit + push + predare | SHA pe GitHub și acces profesor |
+| 0–8 | GitHub / Codespace / editor / terminal | Identify the four components |
+| 8–23 | Private copy, instructor access, Codespace, Python extension | Correct remote and working Python |
+| 23–35 | Navigation and a file created in the terminal | `dovezi/terminal.txt` |
+| 35–48 | First program, first commit and push | Your first commit visible in the browser |
+| 48–70 | `print` experiments: predict → run → explain | Program and observation table |
+| 70–80 | `.gitignore`, output file, local checks | Evidence and completed journal |
+| 80–90 | Second commit, push, and submission | Matching SHA and instructor access |
 
-## 1. Pregătirea mediului
+## 1. Set up your environment
 
-Urmează README.md și README_Codespaces.md. Instalează/verifică extensia Microsoft
-Python și selectează interpretorul. În terminal, din rădăcina proiectului:
+Follow README.md and README_Codespaces.md. Install/verify Microsoft Python and
+select the interpreter. In the terminal, from the repository root:
 
 ```bash
 pwd
@@ -29,78 +29,79 @@ git remote -v
 git branch --show-current
 ```
 
-Notează versiunile, branch-ul (`main`), remote-ul și rolul a patru fișiere/foldere.
-Nu copia toate logurile de pornire. Arată profesorului extensia activă și interpretorul.
+Record the versions, branch (`main`), remote, and the purposes of four files or
+folders. Do not copy every startup log. Show your instructor the enabled extension
+and the selected interpreter.
 
-## 2. Terminal și fișiere
+## 2. Terminal and files
 
-Urmează exercițiul de navigare din README_Terminal.md și creează
-`dovezi/terminal.txt` cu `printf`. Scrie în jurnal calea înainte și după `cd dovezi`
-și de ce `python app.py` din acel folder nu găsește fișierul.
-Revino cu `cd ..` înainte de comenzile următoare.
+Follow the navigation exercise in README_Terminal.md and create
+`dovezi/terminal.txt` with `printf`. In your journal, record the path before and
+after `cd dovezi`, and explain why `python app.py` cannot find the file from that
+folder. Return to the root with `cd ..` before the following commands.
 
-## 3. Prima rulare și checkpoint-ul 1
+## 3. First run and checkpoint 1
 
-1. Citește `app.py`. Prezice output-ul și rulează `python app.py`.
-2. Adaugă o variabilă `alias` cu prenumele sau un pseudonim și un apel `print`
-   care produce `Salut, ALIAS!`, folosind valoarea variabilei. Nu pune date sensibile.
-3. Salvează și rulează atât din terminal, cât și prin **Run Python File in Terminal**.
-4. Completează secțiunile „Mediu”, „Navigare” și „Prima rulare” din jurnal.
-5. Creează primul commit propriu:
+1. Read `app.py`. Predict the output, then run `python app.py`.
+2. Add a variable named `alias` containing your first name or a pseudonym and a
+   `print` call that produces `Hello, ALIAS!` using that variable. Avoid sensitive information.
+3. Save and run the file both from the terminal and with **Run Python File in Terminal**.
+4. Complete the Environment, Navigation, and First run sections of your journal.
+5. Create your first commit:
 
 ```bash
 git status
 git diff
 git add app.py raspunsuri/lab1.md dovezi/terminal.txt
 git diff --staged
-git commit -m "Configureaza mediul si adauga salutul personal"
+git commit -m "Set up the environment and add a personal greeting"
 git push origin main
 ```
 
-Deschide copia ta pe GitHub și verifică noul salut. Notează SHA-ul commit-ului
-în jurnal după commit; informația va intra în următorul commit.
-Profesorul verifică dacă poate deschide repository-ul privat.
+Open your own repository on GitHub and check the new greeting. Record the commit
+SHA in your journal after creating the commit; that entry will be included in
+your next commit. Your instructor checks that they can open your private repository.
 
-## 4. Experimente `print`
+## 4. `print` experiments
 
-Pentru fiecare experiment: **scrie predicția în jurnal înainte de rulare**, rulează,
-apoi notează rezultatul și explicația. Construiește `app.py` progresiv, fără input.
-Păstrează salutul inițial și salutul personal ca primele două linii ale output-ului.
+For each experiment, **record your prediction before running**, then run, record
+the observed output, and explain it. Build `app.py` progressively, without input.
+Keep the initial greeting and your personal greeting as the first two output lines.
 
-| Experiment | Sarcină | Ce explici în jurnal |
+| Experiment | Task | What to explain |
 | --- | --- | --- |
-| P1 | Afișează `GIT|PYTHON|TERMINAL` printr-un singur `print` cu 3 argumente și `sep` | Separatorul și lipsa spațiilor |
-| P2 | Cu două apeluri `print`, afișează `Pornesc...gata!` pe aceeași linie | `end` la primul apel |
-| P3 | Adaugă un apel `print()` fără argumente | De ce apare o linie goală |
-| P4 | Afișează rezultatul lui `2 + 3`, apoi al lui `"2" + "3"` | Numere față de text |
-| P5 | Afișează `Linia 1` și `Linia 2` cu un singur `print` și `\n` | Rând nou în interiorul șirului |
-| P6 | Afișează `Mesaj personal: ` urmat de un mesaj ales de tine | Ghilimelele și textul propriu |
+| P1 | Display `GIT|PYTHON|TERMINAL` with one `print`, three arguments, and `sep` | Separator and absence of spaces |
+| P2 | Use two `print` calls to display `Starting...done!` on one line | `end` on the first call |
+| P3 | Add a `print()` call with no arguments | Why a blank line appears |
+| P4 | Display the result of `2 + 3`, then of `"2" + "3"` | Numbers versus text |
+| P5 | Display `Line 1` and `Line 2` using one `print` and `\n` | Newline inside a string |
+| P6 | Display `Personal message: ` followed by your own message | Quotation marks and your chosen text |
 
-Output-ul final trebuie să aibă **10 linii**, în această ordine (linia 5 este goală):
+Your final output must have **10 lines**, in this order (line 5 is blank):
 
 ```text
 Hello, world!
-Salut, ALIAS!
+Hello, ALIAS!
 GIT|PYTHON|TERMINAL
-Pornesc...gata!
+Starting...done!
 
 5
 23
-Linia 1
-Linia 2
-Mesaj personal: MESAJUL TAU
+Line 1
+Line 2
+Personal message: YOUR MESSAGE
 ```
 
-Înlocuiești `ALIAS` și `MESAJUL TAU`. Folosește efectiv `sep`, `end`, `print()` și
-operațiile cerute; simpla scriere a unui șir mare cu rezultatul nu îndeplinește sarcina.
-Adaugă cel puțin două comentarii care explică deciziile tale.
+Replace `ALIAS` and `YOUR MESSAGE`. Use the required `sep`, `end`, `print()`, and
+operations in the actual code. Writing one large string containing the expected
+output does not meet the implementation requirements. Add at least two useful comments.
 
-## 5. Git ignore și output
+## 5. Ignored files and saved output
 
-Din rădăcina proiectului:
+From the repository root:
 
 ```bash
-printf 'Exercitiu local, nu se preda.\n' > experiment.local.txt
+printf 'Local experiment, not submitted.\n' > experiment.local.txt
 git status --short
 git check-ignore -v experiment.local.txt
 python app.py > dovezi/output_lab1.txt
@@ -108,31 +109,31 @@ cat dovezi/output_lab1.txt
 python tools/verifica.py lab1
 ```
 
-Explică de ce `experiment.local.txt` nu apare ca fișier nou de predate și ce regulă
-din `.gitignore` îl exclude. Compară `cat app.py` cu `python app.py`: sursă față de
-output. Nu modifica verificatorul pentru a trece verificarea.
+Explain why `experiment.local.txt` does not appear as a new file to submit and
+which `.gitignore` rule excludes it. Compare `cat app.py` and `python app.py`:
+source text versus program output. Do not edit the checker to make your work pass.
 
-## 6. Checkpoint-ul 2 și predarea
+## 6. Checkpoint 2 and submission
 
-Completează jurnalul și răspunde fără AI: ce ar putea vedea profesorul dacă ai
-făcut doar Save? Dar numai commit? Ce se schimbă după push?
+Complete your journal. Without AI, explain what your instructor could see after
+only Save, after only commit, and after push.
 
 ```bash
 git add app.py raspunsuri/lab1.md dovezi/output_lab1.txt
 git diff --staged
-git commit -m "Completeaza experimentele print si dovezile lab1"
+git commit -m "Complete print experiments and Lab 1 evidence"
 git push origin main
 git status
 git log --oneline -5
 git rev-parse HEAD
 ```
 
-Urmează PREDARE.md. Ai nevoie de cel puțin **2 commit-uri proprii cu schimbări reale**,
-în plus față de commit-ul inițial al template-ului. Nu folosi commit-uri goale.
-Oprește Codespace-ul după ce ai verificat predarea în browser.
+Follow PREDARE.md. You need at least **2 commits of your own with meaningful
+changes**, in addition to the template's initial commit. Do not create empty commits.
+Stop the Codespace after verifying your submission in the browser.
 
-## Verificare individuală, fără notițe (2 minute)
+## Individual check without notes (2 minutes)
 
-Profesorul îți cere să schimbi separatorul din P1 din `|` în ` / `, să prezici
-output-ul, să rulezi și să explici unde faci push. Revino la forma cerută, salvează
-și rulează din nou. Dacă faci o schimbare permanentă, include-o într-un nou commit.
+Your instructor asks you to change the P1 separator from `|` to ` / `, predict
+the output, run the program, and explain where you push your work. Restore the
+required separator, save, and rerun. Include any permanent changes in a new commit.

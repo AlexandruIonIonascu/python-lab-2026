@@ -1,50 +1,51 @@
-# Predarea: codul este pe GitHub și profesorul are acces
+# Submission: code on GitHub, with instructor access
 
-Predarea este individuală. Profesorul comunică înainte de laborator username-ul
-GitHub, codul de repository, canalul de predare și termenele pentru L1 și L2.
-În lipsa acestor informații cere-le; nu trimite linkul într-un issue public.
+Submit individually. Before the lab, your instructor provides their GitHub
+username, the repository naming code, the submission location, and both deadlines.
+Ask if any of these are missing. Do not submit a private repository link in a public issue.
 
-## La sfârșitul fiecărui laborator
+## At the end of each lab
 
-1. Salvează și rulează aplicația. Rulează verificatorul pentru etapa curentă.
-2. Fă `git add`, commit și **push** pentru toate fișierele cerute.
-3. Confirmă `main`, remote-ul și starea cu `git status` și `git remote -v`.
-4. Rulează `git rev-parse HEAD` și copiază SHA-ul complet al commit-ului predat.
-5. Deschide repository-ul tău în browser, pe `main`, și deschide ultimul commit.
-   SHA-ul din browser trebuie să corespundă celui din terminal. Citește acolo codul
-   și jurnalul; nu trimite linkul Codespace-ului.
-6. Verifică invitația profesorului la repository-ul privat. „Pending” nu înseamnă
-   acces acordat: profesorul trebuie să accepte și să confirme că îl poate deschide.
-7. În LMS/formularul comunicat predai:
+1. Save and run your program. Run the checker for the current stage.
+2. Use `git add`, commit, and **push** for all required files.
+3. Check `main`, the remote URL, and your Git state using `git status` and `git remote -v`.
+4. Run `git rev-parse HEAD` and copy the full SHA of the submitted commit.
+5. Open your own repository in the browser on `main`, then open its latest commit.
+   The browser SHA must match the terminal SHA. Read your code and journal there;
+   do not submit the Codespace URL.
+6. Check the instructor invitation. “Pending” does not mean access has been granted:
+   your instructor must accept and confirm that they can open the private repository.
+7. Submit the following in the specified LMS/form:
 
 ```text
-Cod student / grupa:
-Username GitHub:
-Etapa: L1 / L2
-Repository: https://github.com/USERNAME/python-lab-2026-COD
-Commit: https://github.com/USERNAME/python-lab-2026-COD/commit/SHA_COMPLET
-SHA complet:
-Verificare locală: PASS / problema întâmpinată
-Acces profesor: confirmat / invitație în așteptare
-Copilot (la L2): folosit individual / demonstrație observată, recuperare necesară
+Student code / group:
+GitHub username:
+Stage: L1 / L2
+Repository: https://github.com/USERNAME/python-lab-2026-CODE
+Commit: https://github.com/USERNAME/python-lab-2026-CODE/commit/FULL_SHA
+Full SHA:
+Local checks: PASS / problem encountered
+Instructor access: confirmed / invitation pending
+Copilot (L2): used individually / observed demonstration, make-up needed
 ```
 
-Completează valorile, nu preda acest șablon. Dacă nu ai PASS, predă progresul și
-eroarea exactă la termen; profesorul stabilește recuperarea. Nu declara accesul
-„confirmat” până când profesorul nu a putut deschide repository-ul.
+Replace the example values; do not submit the empty template. If checks fail,
+submit your progress and the exact error by the deadline; your instructor will
+arrange follow-up. Do not claim confirmed access until your instructor has opened the repository.
 
-## Ce fișiere trebuie să existe
+## Required files
 
 **L1:** `app.py`, `raspunsuri/lab1.md`, `dovezi/terminal.txt`, `dovezi/output_lab1.txt`.
 
-**L2:** toate cele de la L1, plus `miniapp.py`, cele trei fișiere din `exercitii/`,
-`raspunsuri/lab2.md`, `raspunsuri/copilot.md`, `dovezi/output_lab2.txt`.
-Păstrează ghidurile și configurația. Nu preda doar capturi de ecran sau un ZIP;
-profesorul trebuie să poată citi codul și istoricul în repository.
+**L2:** all L1 files, plus `miniapp.py`, the three programs in `exercitii/`,
+`raspunsuri/lab2.md`, `raspunsuri/copilot.md`, and `dovezi/output_lab2.txt`.
+Keep the guides and configuration. Screenshots or a ZIP alone are not enough;
+your instructor must be able to read the source and history in the repository.
 
-## După predare
+## After submission
 
-Commit-ul trimis în formular este versiunea evaluată. Poți continua să lucrezi,
-dar pentru o nouă predare trimite noul link de commit conform regulii profesorului.
-Nu încerca să adaugi SHA-ul commit-ului final în același commit: identificatorul
-se obține după crearea commit-ului și se trimite separat în LMS/formular.
+The commit link submitted in the form identifies the version to be assessed.
+You may keep working, but a new submission requires a new commit link according
+to your instructor's rules. Do not try to include the final commit SHA inside
+that same commit: the identifier is generated after creating the commit and
+is submitted separately in the LMS/form.

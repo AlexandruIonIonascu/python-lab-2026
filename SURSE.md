@@ -1,27 +1,27 @@
-# Surse oficiale și actualizarea materialului
+# Official sources and material updates
 
-Verificate la **12 octombrie 2026**. Interfețele, planurile și cotele se pot schimba;
-profesorul verifică din nou înaintea fiecărei ediții. Exercițiile Python sunt create
-pentru acest assignment, nu copiate din documentație.
+Checked on **12 October 2026**. Interfaces, plans, and allowances may change;
+the instructor should recheck them before each course edition. The exercises
+were written for this assignment rather than copied from the documentation.
 
-| Subiect | Sursă oficială | Consecință pentru laborator |
+| Topic | Official source | Relevance to the labs |
 | --- | --- | --- |
-| Retragerea Classroom | [Anunț GitHub din august 2026](https://github.com/orgs/community/discussions/205975) | Serviciul a fost retras la 28 august 2026; conturile, repository-urile și organizațiile existente nu au fost afectate |
-| Alternative partenere | [Același anunț GitHub](https://github.com/orgs/community/discussions/205975) | Classroom 50 și Codio sunt opțiuni pentru administrare extinsă; acest pachet funcționează direct prin template + predare în LMS |
-| Template | [Creare template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) | Profesorul activează Template repository |
-| Copia studentului | [Repository din template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) | Repository independent; modificările template-ului nu se propagă automat |
-| Codespaces | [Ce sunt Codespaces](https://docs.github.com/en/codespaces/about-codespaces/what-are-codespaces) | Editor conectat la mediu Linux din cloud |
-| Configurare | [Dev containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) | Mediul Python este definit în proiect |
-| Resurse incluse | [Product usage included](https://docs.github.com/en/billing/reference/product-usage-included) | Core-hours și stocare au cote distincte; nu sunt ore de ceas |
-| Oprire | [Stop/start Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace) | Stop explicit la final, push înainte de ștergere |
-| Extensia Python | [Python în VS Code](https://code.visualstudio.com/docs/python/python-tutorial) | Extensia și interpretorul sunt componente separate |
-| `print` și `input` | [Funcții predefinite Python 3.12](https://docs.python.org/3.12/library/functions.html) | `print` scrie pe un flux text; `input` întoarce text |
-| Planuri Copilot | [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans) | Free și Student au limite; nu cerem un model sau plan plătit |
-| Beneficiu student | [Access Copilot Student](https://docs.github.com/copilot/how-tos/manage-your-account/free-access-with-copilot-student) | Verificare Education și activare separată |
-| Configurare Copilot | [Copilot în VS Code](https://code.visualstudio.com/docs/setup/copilot) | Autentificare și verificarea funcțiilor disponibile |
-| Publicare prin CLI | [gh repo create](https://cli.github.com/manual/gh_repo_create) | Alternativă pentru profesor, pe propriul calculator autentificat |
+| Classroom retirement | [GitHub announcement, August 2026](https://github.com/orgs/community/discussions/205975) | The service retired on 28 August 2026; existing accounts, repositories, and organizations were unaffected |
+| Partner alternatives | [The same GitHub announcement](https://github.com/orgs/community/discussions/205975) | Classroom 50 and Codio support broader course administration; these labs work directly with a template and LMS submissions |
+| Template setup | [Create a template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) | Instructor enables Template repository |
+| Student copy | [Create a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) | Independent repository; template updates do not propagate automatically |
+| Codespaces | [What are Codespaces?](https://docs.github.com/en/codespaces/about-codespaces/what-are-codespaces) | Editor connected to a cloud Linux environment |
+| Environment configuration | [Dev containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) | Python environment configured in the repository |
+| Included resources | [Product usage included](https://docs.github.com/en/billing/reference/product-usage-included) | Separate core-hour and storage allowances; core-hours are not clock hours |
+| Stopping | [Stop/start Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace) | Stop explicitly; push before deleting |
+| Python extension | [Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial) | Extension and interpreter are separate components |
+| `print` and `input` | [Python 3.12 built-in functions](https://docs.python.org/3.12/library/functions.html) | `print` writes to a text stream; `input` returns text |
+| Copilot plans | [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans) | Free and Student have limits; no paid plan or specific model required |
+| Student benefit | [Access Copilot Student](https://docs.github.com/copilot/how-tos/manage-your-account/free-access-with-copilot-student) | Education verification and separate benefit activation |
+| Copilot setup | [Copilot in VS Code](https://code.visualstudio.com/docs/setup/copilot) | Sign-in and checking available functionality |
+| CLI publication | [gh repo create](https://cli.github.com/manual/gh_repo_create) | Instructor alternative on their authenticated computer |
 
-Licența MIT originală, Copyright (c) 2024 gfuvt, este păstrată în LICENSE.
-Au fost rescrise ghidurile în română, corectate denumirile/linkurile și adăugate
-exerciții, dovezi, configurare și verificare. Nu este inclusă o soluție completă
-în template-ul studenților.
+The original MIT license, Copyright (c) 2024 gfuvt, is preserved in LICENSE.
+The guides, exercises, journals, starter comments, program messages, checker,
+and workflow are written in English for the course. Existing paths are retained
+to keep links compatible. A complete solution is not included in the student template.

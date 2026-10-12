@@ -1,54 +1,55 @@
-# Codespaces și extensia Python
+# Codespaces and the Python extension
 
-Un Codespace este un mediu de dezvoltare găzduit în cloud. În browser vezi editorul
-VS Code; fișierele, terminalul, Git și interpretorul rulează în mediul Linux din cloud.
-Nu confunda Codespaces cu `github.dev`: acesta din urmă este un editor web și nu
-oferă același mediu de execuție cu terminal și interpretor.
+A Codespace is a cloud-hosted development environment. You see VS Code in your
+browser, while the files, terminal, Git, and Python interpreter run in the cloud's
+Linux environment. Do not confuse Codespaces with `github.dev`: the latter is a
+web editor and does not provide the same terminal/interpreter execution environment.
 
-## Ce asigură acest proiect
+## What this repository configures
 
-`.devcontainer/devcontainer.json` folosește imaginea oficială devcontainers pentru
-Python 3.12. Nu sunt necesare biblioteci instalate cu pip. La pornire se verifică
-versiunile Python și Git. Extensiile nu sunt instalate automat în configurația de
-bază: instalarea extensiei Python este un exercițiu explicit și verificabil.
+`.devcontainer/devcontainer.json` uses the official devcontainers image for Python
+3.12. No additional pip packages are required. Setup checks the Python and Git
+versions. The configuration does not automatically install editor extensions:
+installing or verifying the Python extension is an explicit learning task.
 
-## Instalarea extensiei Python în Codespace
+## Install or verify the Python extension in the Codespace
 
-1. În editorul Codespaces deschide **Extensions** din bara laterală.
-2. Caută **Python**, publisher **Microsoft**, identificator `ms-python.python`.
-3. Dacă lipsește, apasă **Install** pentru mediul Codespaces. Dacă este deja instalată
-   (de exemplu prin Settings Sync), verifică să fie activată în Codespace și notează
-   „deja instalată” în jurnal. Nu trebuie reinstalată inutil.
-4. Deschide `app.py`. Din Command Palette (`F1` sau `Ctrl+Shift+P`) selectează
-   **Python: Select Interpreter** → interpretorul Python 3.12 din container.
-5. Rulează în terminal `python --version`. Notează și interpretorul selectat în editor.
-6. Folosește **Run Python File in Terminal** pentru `app.py`. Compară cu rezultatul
-   comenzii `python app.py` din shell. Trebuie să vezi același output.
+1. Open **Extensions** in the Codespaces editor's sidebar.
+2. Search for **Python**, publisher **Microsoft**, identifier `ms-python.python`.
+3. If it is missing, click **Install** for the Codespaces environment. If it is
+   already installed, for example through Settings Sync, verify that it is enabled
+   in the Codespace and record “already installed” in your journal. Do not reinstall it unnecessarily.
+4. Open `app.py`. In the Command Palette (`F1` or `Ctrl+Shift+P`), select
+   **Python: Select Interpreter** → the Python 3.12 interpreter in the container.
+5. Run `python --version` in the terminal. Record that version and the interpreter selected in the editor.
+6. Use **Run Python File in Terminal** for `app.py`. Compare its output with
+   `python app.py` in the shell. The output should match.
 
-Extensia oferă ajutor de editare, rulare și depanare; **nu conține interpretorul**.
-Interpretorul este deja în imaginea acestui Codespace. Dacă dezactivezi extensia,
-`python app.py` funcționează în continuare, atât timp cât Python este instalat.
+The extension supports editing, running, and debugging; **it does not include
+the Python interpreter**. The interpreter is already installed in this image.
+Disabling the extension does not stop `python app.py` from working in the shell
+as long as Python itself is installed.
 
-## Cele trei zone pe care le identifici
+## Identify the editor's main areas
 
-Explorer: fișierele și folderele. Editor: conținutul fișierului selectat.
-Terminal: comenzile și output-ul. Source Control: modificările și commit-urile.
-În jurnal explică unde ai scris codul și unde l-ai executat.
+Explorer shows files and folders. The editor shows the selected file's contents.
+The terminal shows commands and output. Source Control shows changes and commits.
+Explain in your journal where you wrote code and where you executed it.
 
-## Încheiere și reluare
+## Stop and resume
 
-După push și verificare pe GitHub: `F1` → **Codespaces: Stop Current Codespace**,
-sau [github.com/codespaces](https://github.com/codespaces) → meniul Codespace-ului → Stop.
-Simpla închidere a tabului nu garantează oprirea imediată. La laboratorul 2 redeschide
-același Codespace; nu crea unul nou fără motiv. Stop păstrează mediul și fișierele.
-Ștergerea Codespace-ului poate pierde fișiere și commit-uri care nu au fost pushed.
+After pushing and checking GitHub: `F1` → **Codespaces: Stop Current Codespace**,
+or [github.com/codespaces](https://github.com/codespaces) → your Codespace's menu → Stop.
+Closing the browser tab does not guarantee immediate shutdown. Reopen the same
+Codespace for Lab 2; do not create another without a reason. Stopping preserves
+the environment and files. Deleting it can lose files and commits you have not pushed.
 
-## Utilizare inclusă și costuri
+## Included usage and costs
 
-La verificarea din 12 octombrie 2026, contul personal Free include 120 core-hours
-și 15 GB de stocare pe lună; Pro include 180 core-hours și 20 GB. Core-hours nu sunt
-ore de ceas: 90 de minute pe 2 cores consumă aproximativ 3 core-hours; două sesiuni
-aproximativ 6, plus timpul în care mediul mai rulează. Stocarea se contorizează și
-când Codespace-ul este oprit. Verifică valorile actuale în pagina de billing a contului.
-Nu porni trial-uri sau consum plătit pentru acest assignment. Dacă nu ai cotă,
-anunță profesorul și folosește varianta locală din DEPANARE.md.
+As checked on 12 October 2026, a personal Free account includes 120 core-hours and
+15 GB of storage per month; Pro includes 180 core-hours and 20 GB. Core-hours are
+not clock hours: 90 minutes on a 2-core machine uses about 3 core-hours; two labs
+use about 6, plus any time the environment remains running. Storage usage continues
+while a Codespace is stopped. Check current allowances in your account's billing settings.
+Do not start a paid trial or enable paid usage for this assignment. If you have
+no available allowance, tell your instructor and use the local alternative in DEPANARE.md.

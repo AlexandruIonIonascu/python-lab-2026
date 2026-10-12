@@ -1,64 +1,66 @@
-# Copilot: propune, dar tu verifici și explici
+# Copilot: it suggests, you verify and explain
 
-GitHub Copilot este un asistent AI pentru programare. Poate sugera cod în editor,
-explica un fragment în chat și ajuta la investigarea unei erori. Sugestiile pot
-conține greșeli sau pot încălca cerința. Un rezultat generat nu dovedește înțelegere.
+GitHub Copilot is an AI programming assistant. It can suggest code in the editor,
+explain selected code in chat, and help investigate an error. Its suggestions
+may be wrong or may violate the task requirements. Generated code alone does
+not demonstrate your understanding.
 
-## Activare în Codespaces
+## Set up Copilot in Codespaces
 
-1. Verifică planul în [setările Copilot](https://github.com/settings/copilot).
-   Copilot Student este destinat studenților verificați prin GitHub Education;
-   beneficiul trebuie activat după verificare. Dacă nu este disponibil încă,
-   folosește Copilot Free dacă este disponibil pentru contul tău.
-2. În editor caută **GitHub Copilot**, publisher **GitHub**, în Extensions sau
-   folosește acțiunea de configurare Copilot din bara de stare. Urmează autentificarea
-   cu același cont GitHub. Verifică și funcția Chat; editorul poate gestiona separat
-   componentele Copilot / Copilot Chat, în funcție de versiune.
-3. În chat alege modul de întrebări (**Ask**, dacă apare). Pentru acest laborator
-   nu delega întregul assignment în Agent și nu permite executarea automată a comenzilor.
-4. Pentru completări, textul sugerat apare de obicei estompat. Citește-l înainte de
-   acceptare; `Tab` acceptă de regulă sugestia, `Esc` o respinge. Tastele pot varia.
+1. Check your plan in [Copilot settings](https://github.com/settings/copilot).
+   Copilot Student is for students verified through GitHub Education; activate
+   the benefit after verification. If it is not available yet, use Copilot Free
+   if your account is eligible.
+2. Search for **GitHub Copilot**, publisher **GitHub**, in Extensions, or use the
+   Copilot setup action in the status bar. Sign in with the same GitHub account.
+   Check Chat as well; Copilot / Copilot Chat components may be managed separately
+   depending on the editor version.
+3. For these tasks, use a question-answering mode (**Ask**, if available). Do not
+   delegate the entire assignment to Agent or allow automatic command execution.
+4. Inline suggestions usually appear as faded “ghost text”. Read before accepting.
+   `Tab` normally accepts a suggestion and `Esc` rejects it; shortcuts may vary.
 
-Planurile gratuite au limite. Student nu înseamnă acces nelimitat la toate modelele;
-în documentația actuală Free și Student folosesc selecția automată a modelului.
-Nu este necesar să cumperi Copilot Pro. Nu alegem un model anume pentru exerciții.
+Free plans have limits. Student does not mean unlimited access to every model;
+the current documentation describes automatic model selection for Free and
+Student. You do not need to buy Copilot Pro or select a particular model.
 
-## Regulile laboratorului
+## Lab rules
 
-- Laboratorul 1 și prima corectare a erorilor din laboratorul 2 se fac fără AI.
-  Dezactivează sugestiile Copilot pentru Python din meniul Copilot dacă apar.
-- După checkpoint-ul de depanare activezi Copilot și păstrezi un jurnal al folosirii.
-- Nu introduci în prompt parole, tokenuri, date personale sau cod privat al altora.
-- Nu accepți comenzi pe care nu le poți explica. `git diff` îți arată ce s-a schimbat.
-- `.github/copilot-instructions.md` cere indicii și explicații; aceste instrucțiuni
-  sunt orientative, nu împiedică tehnic generarea soluției.
+- Complete Lab 1 and the initial Lab 2 debugging checkpoint without AI.
+  Disable Copilot suggestions for Python from the Copilot menu if they appear.
+- After the debugging checkpoint, enable Copilot and record your use in a journal.
+- Do not send passwords, tokens, personal data, or someone else's private code in prompts.
+- Do not accept commands you cannot explain. Inspect file changes with `git diff`.
+- `.github/copilot-instructions.md` asks for hints and explanations. It is guidance,
+  not a technical mechanism that prevents full solutions from being generated.
 
-## Trei sarcini cu dovezi
+## Three tasks with evidence
 
-**A. Explicație.** Selectează un fragment cu `print`, `sep` și `end` din `app.py`.
-Prompt: „Explică fragmentul pentru un începător. Prezice output-ul exact, inclusiv
-spațiile și rândurile. Nu modifica fișierul.” Compară răspunsul cu o rulare reală.
+**A. Explanation.** Select a fragment containing `print`, `sep`, and `end` from
+`app.py`. Prompt: “Explain this fragment to a beginner. Predict the exact output,
+including spaces and newlines. Do not modify the file.” Compare the response
+with the output of a real run.
 
-**B. O propunere de cod limitată.** Pentru `miniapp.py` cere un mic fragment pentru
-calculul sau formatarea totalului. Prompt: „Propune cel mult 5 linii Python, folosind
-doar variabile, conversii și print. Totalul trebuie să aibă două zecimale.
-Explică fiecare linie. Nu executa comenzi și nu modifica alte fișiere.”
-Acceptă/adaptează numai după ce înțelegi. Verifică cele trei cazuri din LAB_02.md.
+**B. A limited code suggestion.** Ask for a small calculation or formatting
+fragment for `miniapp.py`. Prompt: “Suggest at most 5 lines of Python using only
+variables, conversions, and print. The total must have two decimal places.
+Explain every line. Do not execute commands or change other files.”
+Accept or adapt only what you understand. Test all three cases in LAB_02.md.
 
-**C. Critică.** Cere o soluție pentru același calculator fără să precizezi inițial
-conversia input-ului sau formatarea. Analizează propunerea: detectează un risc de
-corectitudine sau nepotrivire pentru începători. Dacă este corectă, explică o limitare
-(input invalid, lipsa cerințelor în prompt, complexitate) fără a inventa o eroare.
-Rescrie promptul cu restricții și compară rezultatele.
+**C. Critique.** Request a solution for the same calculator without initially
+specifying input conversion or formatting. Inspect the suggestion for a
+correctness risk or unnecessary complexity. If it is correct, explain a real
+limitation, such as invalid input or an underspecified prompt, rather than
+inventing an error. Rewrite the prompt with clear constraints and compare responses.
 
-În `raspunsuri/copilot.md` păstrezi promptul exact, fragmentul relevant al răspunsului,
-ce ai acceptat/refuzat, motivul, testul și rezultatul observat. Scrie explicațiile
-în cuvintele tale. Minimum o propunere trebuie refuzată sau adaptată justificat.
+In `raspunsuri/copilot.md`, record the exact prompt, the relevant response, what
+you accepted/rejected/adapted, your reason, the test, and the observed result.
+Write explanations in your own words. Justify at least one rejection or adaptation.
 
-## Dacă nu ai acces la Copilot
+## If you cannot access Copilot
 
-Notează mesajul/problema și anunță profesorul. Poți termina Python și Git fără AI.
-Pentru componenta Copilot participi la o demonstrație făcută de profesor/coleg,
-fără partajarea conturilor, notezi „observat”, apoi verifici individual fragmentul.
-Profesorul stabilește o recuperare pentru utilizarea individuală. Nu declara că ai
-folosit Copilot dacă ai analizat numai un răspuns demonstrat.
+Record the problem or error message and tell your instructor. Complete Python
+and Git without AI. For the Copilot component, observe a demonstration by your
+instructor or a classmate without sharing accounts, label it “observed”, and
+independently test the fragment. Your instructor will arrange an individual
+make-up activity. Do not claim individual Copilot use if you only observed a demonstration.

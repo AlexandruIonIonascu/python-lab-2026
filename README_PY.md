@@ -1,23 +1,23 @@
-# Python: de la fișier sursă la output
+# Python: from source file to output
 
-Python este un limbaj de programare. Fișierul `.py` conține instrucțiuni scrise
-în acest limbaj. Interpretorul Python este programul care execută instrucțiunile.
-În Codespaces, comanda `python app.py` pornește interpretorul cu fișierul ca argument.
-Un program Python poate automatiza calcule, analiza date sau construi aplicații;
-primele noastre aplicații sunt aplicații de terminal, fără interfață grafică.
+Python is a programming language. A `.py` file contains instructions written in
+that language. The Python interpreter is the program that executes them.
+In Codespaces, `python app.py` starts the interpreter and passes the filename as
+an argument. Python can automate calculations, analyse data, and build applications.
+Our first applications run in the terminal and do not have a graphical interface.
 
-Într-un script simplu, instrucțiunile se execută în ordine. Nu învăța că Python
-„citește întotdeauna doar câte o linie”: în CPython sursa este compilată în bytecode
-înainte de execuție. O eroare de sintaxă în fișier poate împiedica orice afișare.
+In a simple script, statements execute in order. Do not reduce this to “Python
+always reads just one line at a time”: CPython compiles source into bytecode
+before executing it. A syntax error in the file may prevent any output at all.
 
-## Cum funcționează `print`
+## What `print` does
 
-`print` este o funcție predefinită. În mod obișnuit scrie text pe output-ul standard
-(`stdout`), pe care terminalul îl afișează. Nu salvează codul, nu face commit,
-nu creează implicit un fișier și nu deschide o pagină web.
+`print` is a built-in function. By default, it writes text to standard output
+(`stdout`), which the terminal displays. It does not save your source, create a
+commit, automatically create a file, or open a web page.
 
 ```python
-print("Salut!")
+print("Hello!")
 print(2 + 3)
 print("2" + "3")
 ```
@@ -25,74 +25,74 @@ print("2" + "3")
 Output:
 
 ```text
-Salut!
+Hello!
 5
 23
 ```
 
-Ghilimelele delimitează un șir de caractere (`str`); nu se afișează. `2` este un
-număr întreg (`int`); `"2"` este text. `+` adună numere, dar concatenează două șiruri.
-O linie care începe cu `#` este comentariu și nu produce output.
-`print()` fără argumente produce implicit o linie goală.
+Quotation marks delimit a string (`str`) and are not printed. `2` is an integer
+(`int`); `"2"` is text. `+` adds numbers but concatenates two strings.
+A line starting with `#` is a comment and produces no output.
+Calling `print()` without arguments produces a blank line by default.
 
-| Fragment | Output | Explicație |
+| Fragment | Output | Explanation |
 | --- | --- | --- |
-| `print("A", "B")` | `A B` | Separator implicit: spațiu |
-| `print("A", "B", sep="|")` | `A|B` | Separator explicit între argumente |
-| `print("A", end=""); print("B")` | `AB` pe aceeași linie | Primul apel nu încheie linia |
-| `print("A\nB")` | `A` și `B` pe linii diferite | `\n` din șir reprezintă un rând nou |
+| `print("A", "B")` | `A B` | The default separator is a space |
+| `print("A", "B", sep="|")` | `A|B` | Explicit separator between arguments |
+| `print("A", end=""); print("B")` | `AB` on one line | The first call does not end the line |
+| `print("A\nB")` | `A` and `B` on separate lines | `\n` inside a string represents a newline |
 
-Fără `end` explicit, `print` adaugă `\n` la final. Pentru laborator scrie apelurile
-pe linii separate; punctul și virgula din tabel doar comprimă exemplul.
-`sep` și `end` sunt argumente cu nume și trebuie să fie șiruri (sau `None`).
+Unless you set `end`, `print` adds `\n` at the end. Write the two calls on separate
+source lines in your exercise; the semicolon only shortens the table example.
+`sep` and `end` are named arguments and must be strings (or `None`).
 
-## Variabile și expresii
+## Variables and expressions
 
 ```python
 alias = "Ada"
-cantitate = 2
-pret = 12.5
-total = cantitate * pret
+quantity = 2
+unit_price = 12.5
+total = quantity * unit_price
 print(f"Total: {total:.2f}")
 ```
 
-`=` atribuie o valoare unui nume. `*` înmulțește. `12.5` este un număr cu virgulă
-mobilă (`float`), scris cu punct în Python. Un f-string introduce valori în text:
-`{total:.2f}` afișează exact două zecimale. `print` afișează rezultatul calculului;
-calculul se face în expresie, nu pentru că `print` ar fi un calculator special.
+`=` assigns a value to a name. `*` multiplies values. `12.5` is a floating-point
+number (`float`), written with a decimal point in Python. An f-string inserts
+values into text: `{total:.2f}` displays exactly two decimal places.
+The expression performs the calculation; `print` displays its result.
 
-## `input`: aplicația citește de la utilizator
+## `input`: reading a user's response
 
 ```python
 alias = input("Alias: ")
-print(f"Salut, {alias}!")
+print(f"Hello, {alias}!")
 ```
 
-Programul așteaptă până tastezi răspunsul și apeși Enter în terminal.
-`input` întoarce text. Pentru calcule folosești conversii:
+The program waits until you type a response in the terminal and press Enter.
+`input` returns text. Convert numeric input before calculating:
 
 ```python
-cantitate = int(input("Cantitate: "))
-pret = float(input("Pret unitar: "))
+quantity = int(input("Quantity: "))
+unit_price = float(input("Unit price: "))
 ```
 
-`int("2")` produce 2; `float("12.5")` produce 12.5.
-`int("doua")` și `float("12,5")` produc `ValueError`. Cerința de bază presupune
-input valid; validarea input-ului este un exercițiu opțional.
-În REPL, expresia `2 + 3` își afișează rezultatul automat; aceeași expresie singură
-într-un script nu afișează nimic. În script ai nevoie de `print(2 + 3)`.
+`int("2")` produces 2; `float("12.5")` produces 12.5.
+`int("two")` and `float("12,5")` raise `ValueError`. The required calculator
+assumes valid input; validating invalid input is an optional extension.
+In the REPL, entering `2 + 3` displays the result automatically. That expression
+alone in a script does not display anything; use `print(2 + 3)` in a script.
 
-## Trei erori pe care le investighezi
+## Three errors to investigate
 
-| Eroare | Exemplu | Ce verifici |
+| Error | Example | What to inspect |
 | --- | --- | --- |
-| `SyntaxError` | O paranteză neînchisă | Sintaxa; fișierul poate să nu ruleze deloc |
-| `NameError` | `print(mesaj)` fără definirea lui `mesaj` | Nume, ghilimele, ordinea atribuirilor |
-| `TypeError` | `"Total: " + 5` | Tipuri incompatibile; folosește conversie, virgulă sau f-string |
+| `SyntaxError` | An unclosed parenthesis | Syntax; the file may not run at all |
+| `NameError` | `print(message)` before defining `message` | Names, quotation marks, and assignment order |
+| `TypeError` | `"Total: " + 5` | Incompatible types; use conversion, a comma, or an f-string |
 
-Citește ultima linie a erorii, apoi numele fișierului și numărul liniei.
-Indentarea contează pentru blocuri Python. La început folosim instrucțiuni la
-nivelul de bază, fără spații la începutul liniei. Python distinge majusculele:
-`print` funcționează, `Print` este alt nume.
+Read the final line of an error, then the filename and line number.
+Indentation matters for Python blocks. Our first statements are at the top
+level, with no leading spaces. Names are case-sensitive: `print` and `Print`
+are different names.
 
-Practică: întâi prezici rezultatul, apoi rulezi, compari și explici diferența.
+For each experiment: predict first, run it, compare, and explain the difference.
