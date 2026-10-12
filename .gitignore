@@ -1,12 +1,6 @@
-# Python-generated files
+# Generated Python files and local environments
 __pycache__/
 *.py[cod]
-# Virtual environments and caches
 .venv/
 venv/
-.pytest_cache/
-# Secrets and local experiments
 .env
-.env.*
-*.local.txt
-# Submission evidence in dovezi/ is NOT ignored.

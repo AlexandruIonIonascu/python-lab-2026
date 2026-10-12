@@ -1,144 +1,139 @@
-# Lab 2 — debug, build, and evaluate Copilot (90 minutes)
+# Lab 2 — practise the workflow and use Copilot
 
-Reopen the same Codespace and your existing repository. The first two sections
-are completed without AI.
+**90 minutes. Most of this session is about GitHub, Codespaces, and Copilot.**
+The final programming tasks use only print statements and variables.
 
-| Minutes | Activity | Checkpoint |
-| --- | --- | --- |
-| 0–10 | Individual recap and Lab 1 submission check | Explain Save / Run / Commit / Push |
-| 10–27 | Three errors, before and after fixing | Debugging journal |
-| 27–35 | Debugging commit and push | Your third commit visible on GitHub |
-| 35–47 | `input`, conversions, and calculator requirements | Predict three results |
-| 47–67 | Copilot explanation, limited suggestion, and critique | Decisions and tests in your journal |
-| 67–80 | Implementation and three test cases | Correct output and evidence |
-| 80–90 | Individual explanation, commit, push, and final submission | Your fourth commit and verified access |
+| Minutes | Activity |
+| --- | --- |
+| 0–15 | Reopen the same Codespace and find your Lab 1 work |
+| 15–30 | Make a small change and repeat commit/push |
+| 30–50 | Set up Copilot and ask it to explain a print statement |
+| 50–60 | Read, accept or adapt, run, and explain one small suggestion |
+| 60–80 | Short print and variable exercises |
+| 80–90 | Commit, push, and submit |
 
-## 1. Recap
+## 1. Find your work again
 
-From the root, run `git status`, `git remote -v`, `python app.py`, and
-`python tools/verifica.py lab1`. Check your submitted Lab 1 commit in the browser.
-Explain why closing a tab after Save is not enough. If you also worked in another
-environment, synchronize using the guidance in DEPANARE.md.
-
-## 2. Debug without Copilot
-
-Run each program separately:
+Open [github.com/codespaces](https://github.com/codespaces) and reopen the same
+Codespace from Lab 1. In Explorer, open `lab1.py` and `LEARNING_LOG.md`.
 
 ```bash
-python exercitii/eroare_sintaxa.py
-python exercitii/eroare_nume.py
-python exercitii/eroare_tip.py
-```
-
-For each file, complete `raspunsuri/lab2.md`: your prediction, the final error
-line, the indicated source line, the cause, your minimal change, and the output
-after fixing. Fix the files so they display, respectively, exactly
-`Starting debugging`, `Learning Python`, and `Total: 5`.
-Do not delete the files or comment out the entire program. Rerun each file;
-an editor warning disappearing is not proof that the fix works.
-
-```bash
-git add exercitii/eroare_sintaxa.py exercitii/eroare_nume.py exercitii/eroare_tip.py raspunsuri/lab2.md
-git diff --staged
-git commit -m "Fix three errors and explain the debugging process"
-git push origin main
-```
-
-Record the SHA in your journal after the commit; it will enter your next commit.
-
-## 3. Build a terminal cost calculator
-
-In `miniapp.py`, build an application that:
-
-1. Reads an alias with `input` and displays `Hello, ALIAS!`.
-2. Reads a quantity (a nonnegative integer) and a unit price (a nonnegative number).
-   Use a decimal point for prices: `12.5`, not `12,5`.
-3. Converts the numeric inputs using `int` and `float`.
-4. Calculates `total = quantity * unit_price` using the values read from the user.
-5. Displays a line `Total: XX.XX` with exactly two decimal places and no currency
-   symbol or other suffix.
-6. Includes at least two useful comments and uses no external packages.
-
-You may choose your input prompt text, but each prompt must end with `\n`, for
-example `input("Alias:\n")`. This keeps the greeting and total on separate lines
-even when input is supplied automatically. You can experiment with normal inline
-prompts, but use the required form in your submitted application. Do not print
-additional lines starting with `Hello, ` or `Total: `.
-
-### Three required test cases
-
-Record your predictions before running. Run `python miniapp.py` three times
-and enter the following values, each on its own line:
-
-| Case | Alias | Quantity | Unit price | Expected final line |
-| --- | --- | --- | --- | --- |
-| T1 | Ada | 2 | 12.5 | `Total: 25.00` |
-| T2 | Lin | 0 | 9.99 | `Total: 0.00` |
-| T3 | Sam | 3 | 0.1 | `Total: 0.30` |
-
-Explain why T2 is an edge case and why T3 checks decimal formatting.
-Do not hardcode the answers for these three cases. Your program must calculate
-other valid quantities and prices as well. Your instructor will test a new case.
-
-## 4. Copilot with evidence
-
-Enable Copilot and complete tasks A, B, and C in README_Copilot.md.
-Complete `raspunsuri/copilot.md` while you use it; do not invent prompts afterwards.
-You may build the initial structure yourself and request only the limited help
-specified in task B. Justify at least one adapted or rejected suggestion.
-If access is unavailable, follow the demonstration and make-up procedure in the guide.
-
-## 5. Checks and evidence
-
-Save all files, then run:
-
-```bash
-python tools/verifica.py lab2
-python tools/verifica.py all
-```
-
-The checker executes programs with a timeout and compares selected results.
-It does not assess the quality of your explanations, actual Copilot use, or proof
-of pushing. PASS is not your final grade. Implementation requirements are also
-checked manually. The starter intentionally fails checks until you complete the tasks.
-
-Create evidence that can be read in your repository:
-
-```bash
-printf 'Ada\n2\n12.5\n' | python miniapp.py > dovezi/output_lab2.txt
-cat dovezi/output_lab2.txt
-```
-
-The shell pipe `|` sends `printf` output to the Python program's input.
-Record the T2 and T3 outputs from your interactive runs in your journal as well.
-
-## 6. Final submission
-
-```bash
-git add miniapp.py exercitii/eroare_sintaxa.py exercitii/eroare_nume.py exercitii/eroare_tip.py raspunsuri/lab2.md raspunsuri/copilot.md dovezi/output_lab2.txt
-git diff --staged
-git commit -m "Add the cost calculator and evaluate Copilot suggestions"
-git push origin main
 git status
-git log --oneline -6
-git rev-parse HEAD
+git remote -v
+python lab1.py
 ```
 
-Follow PREDARE.md. You should now have at least **4 meaningful commits of your own**:
-two from Lab 1 and two more from Lab 2. The initial template commit does not count.
-Stop the Codespace after checking the submission in the browser.
+Check that your remote is your own repository. Open the same file on GitHub
+and find the change you submitted in Lab 1. Tell a partner what each action
+means: **Save, Run, Commit, Push**. The instructor may ask you to demonstrate.
 
-## Individual check without AI (2 minutes)
+## 2. Repeat a change from start to finish
 
-Your instructor chooses a new alias, quantity, and unit price. Predict the total,
-run the application, and explain the type returned by `input` and why conversion
-is needed. Show your final commit and a Copilot suggestion you adapted.
+Change the final message in `lab1.py` to:
 
-## Optional extensions after the required work
+```text
+I am ready for Lab 2.
+```
 
-- Validate input with `try/except ValueError` and reject negative values. Explain
-  the new blocks and test valid, invalid, and negative input. Preserve the required output for valid cases.
-- Create a branch named `improve-messages`, add an explanatory comment, commit,
-  run `git push -u origin improve-messages`, and open a pull request **in your own
-  repository** targeting `main`. After merging, return to `main` and synchronize.
-  The required submission must remain on `main`.
+Save and rerun the program. Before pushing, look at the file on GitHub: it should
+still have your old message. Now publish the change:
+
+```bash
+git status
+git add lab1.py
+git commit -m "Update my message for Lab 2"
+git push
+```
+
+Refresh GitHub and find the new message. This is the first checkpoint of Lab 2.
+In LEARNING_LOG.md, write one sentence explaining the before/after observation.
+
+## 3. Set up Copilot and ask for an explanation
+
+Follow COPILOT_GUIDE.md to check your account, enable Copilot in the editor, and
+open Chat. Use the question-answering/Ask mode if available.
+
+Select one print statement from `lab1.py` and ask:
+
+```text
+Explain this line to a beginner. What will appear in the terminal?
+Do not change any files. Use a short explanation.
+```
+
+Run the file and check the explanation against the real output. In the Copilot
+section of LEARNING_LOG.md, record your prompt and a one-sentence explanation
+in your own words. Your instructor may ask you to explain it without looking at Chat.
+
+## 4. Try one small suggestion
+
+Ask Copilot:
+
+```text
+Suggest one Python print statement with a friendly message about learning.
+Use only print and quoted text. Do not modify files or run commands.
+```
+
+Read the response. Decide whether to accept it, change the message, or reject it.
+Add one suitable print statement at the end of `lab1.py`, save, and run.
+If Copilot proposes something you do not understand, ask it to simplify it.
+Record the suggested line, your decision, and the output in LEARNING_LOG.md.
+
+You can also try a comment such as `# Print a friendly learning message` to see
+an inline suggestion. Read it before pressing Tab. Showing a suggestion is not
+enough: you must run the accepted code and explain what it does.
+
+## 5. Final exercises: print and variables
+
+Your instructor demonstrates the example in PYTHON_GUIDE.md first.
+Open `lab2.py`. Keep the exercise comments and complete the tasks below, in order.
+Type your first attempt yourself, with Copilot suggestions disabled. You can
+ask Copilot for a short explanation afterwards, then verify it by running.
+
+**A. Two lines of text.** Add two print statements that display:
+
+```text
+My second Python lab
+I am practising variables.
+```
+
+**B. Store and print a name.** Create a variable named `student_name` containing
+a first name or pseudonym. Print its value twice using the variable each time.
+Changing the assignment should change both output lines.
+
+**C. Change a value.** Create a variable named `message` containing `First message`.
+Print it. Assign `Updated message` to that same variable and print it again.
+Predict the two lines before you run.
+
+**D. Print two variables.** Create `course_name` and `group_name`, each containing
+text of your choice. Print their values on separate lines. Do not print the
+variable names in quotation marks: print the values they refer to.
+
+Run `python lab2.py`. Change one of your variable values, save, and run again.
+Tell the instructor which output lines changed and why. Add a short answer
+to the Variables section of LEARNING_LOG.md.
+
+### Optional, only if time remains: text input
+
+Create `input_practice.py` in Explorer. Read one name with
+`student_name = input("What is your name? ")`, then print the variable.
+Run `python input_practice.py`, type a fictional name in the terminal, and press
+Enter. Run again with a different name. Explain where the user's text is stored.
+This is optional and is not needed for the required submission.
+
+## 6. Final commit and submission
+
+Save all files, then:
+
+```bash
+git status
+git add lab1.py lab2.py LEARNING_LOG.md
+git commit -m "Practise Copilot, print statements, and variables"
+git push
+```
+
+If you completed the optional task, add `input_practice.py` before committing.
+Open your repository in the browser and read `lab2.py` and LEARNING_LOG.md.
+Follow SUBMISSION.md and stop your Codespace.
+
+**Quick check:** without Copilot, change a variable, predict the output, run,
+and show the instructor where your final version is on GitHub.
