@@ -1,20 +1,20 @@
-name: Verificare laborator
+name: Lab checks
 on:
   workflow_dispatch:
     inputs:
-      etapa:
-        description: Etapa de verificat
+      stage:
+        description: Stage to check
         required: true
         default: lab1
         type: choice
         options:
           - lab1
           - lab2
-          - toate
+          - all
 permissions:
   contents: read
 jobs:
-  verifica:
+  check:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Ruleaza verificarea aleasa
+      - name: Run the selected checks
         env:
-          ETAPA: ${{ inputs.etapa }}
-        run: python tools/verifica.py "$ETAPA"
+          LAB_STAGE: ${{ inputs.stage }}
+        run: python tools/verifica.py "$LAB_STAGE"
