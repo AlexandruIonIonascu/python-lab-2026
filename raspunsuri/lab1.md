@@ -1,49 +1,49 @@
-# Jurnal laborator 1
+# Lab 1 journal
 
-Cod student: [completează] • Grupa: [completează] • Username GitHub: [completează]
+Student code: [complete] • Group: [complete] • GitHub username: [complete]
 
-## Mediu
+## Environment
 
-- Rolul GitHub, Codespaces, editorului și terminalului, în cuvintele mele: [completează]
-- Python / Git (versiunile): [completează]
-- Extensia Microsoft Python: instalată acum / deja instalată; cum am verificat: [completează]
-- Interpretorul selectat în editor: [completează]
-- Branch și remote (`git remote -v`): [completează]
-- Rolul a 4 fișiere/foldere din proiect: [completează]
+- GitHub, Codespaces, editor, and terminal: their roles in my own words: [complete]
+- Python / Git versions: [complete]
+- Microsoft Python extension: installed now / already installed; how I checked: [complete]
+- Interpreter selected in the editor: [complete]
+- Branch and remote (`git remote -v`): [complete]
+- Purposes of 4 project files/folders: [complete]
 
-## Navigare
+## Navigation
 
-- `pwd` înainte de `cd dovezi`: [completează]
-- `pwd` după `cd dovezi` și după `cd ..`: [completează]
-- De ce `python app.py` nu funcționează din `dovezi/` cu acea cale: [completează]
-- Cum am creat și citit `dovezi/terminal.txt`: [completează]
+- `pwd` before `cd dovezi`: [complete]
+- `pwd` after `cd dovezi` and after `cd ..`: [complete]
+- Why `python app.py` cannot find the file from `dovezi/` using that path: [complete]
+- How I created and read `dovezi/terminal.txt`: [complete]
 
-## Prima rulare
+## First run
 
-- Predicție inițială, înainte de rulare: [completează]
-- Output observat: [completează]
-- Run Python File în editor față de comanda din terminal: [completează]
-- SHA checkpoint 1, după commit și push: [completează]
+- Prediction before the initial run: [complete]
+- Observed output: [complete]
+- Run Python File compared with the terminal command: [complete]
+- Checkpoint 1 SHA, after commit and push: [complete]
 
-## Experimente — completez predicția înainte de fiecare rulare
+## Experiments — predict before each run
 
-| Experiment | Predicție exactă | Output observat | Explicație proprie / diferență |
+| Experiment | Exact prediction | Observed output | My explanation / difference |
 | --- | --- | --- | --- |
-| P1 separator | [completează] | [completează] | [completează] |
-| P2 end | [completează] | [completează] | [completează] |
-| P3 linie goală | [completează] | [completează] | [completează] |
-| P4 numere/text | [completează] | [completează] | [completează] |
-| P5 rând nou | [completează] | [completează] | [completează] |
-| P6 mesaj propriu | [completează] | [completează] | [completează] |
+| P1 separator | [complete] | [complete] | [complete] |
+| P2 end | [complete] | [complete] | [complete] |
+| P3 blank line | [complete] | [complete] | [complete] |
+| P4 numbers/text | [complete] | [complete] | [complete] |
+| P5 newline | [complete] | [complete] | [complete] |
+| P6 personal message | [complete] | [complete] | [complete] |
 
-Reprezint spațiile și rândurile explicit, de exemplu cu `<rând nou>` sau blocuri text.
+Show spaces and newlines explicitly, for example with `<newline>` or text code blocks.
 
-## Explicații de final
+## Final explanations
 
-1. `cat app.py` față de `python app.py`: [completează]
-2. Ce face `print` și unde ajunge output-ul implicit: [completează]
-3. Cum am creat `output_lab1.txt` și de ce nu se vede output-ul pe ecran la redirecționare: [completează]
-4. Regula `.gitignore` observată și rezultatul `git check-ignore`: [completează]
-5. Ce poate citi profesorul după Save, commit și push, separat: [completează]
-6. Ce am verificat în browser după primul push: [completează]
-7. O dificultate și cum am rezolvat-o: [completează]
+1. `cat app.py` compared with `python app.py`: [complete]
+2. What `print` does and where its output goes by default: [complete]
+3. How I created `output_lab1.txt` and why redirected output is not displayed on screen: [complete]
+4. The `.gitignore` rule and the `git check-ignore` result I observed: [complete]
+5. What the instructor can read after Save, commit, and push, separately: [complete]
+6. What I checked in the browser after my first push: [complete]
+7. One difficulty and how I resolved it: [complete]

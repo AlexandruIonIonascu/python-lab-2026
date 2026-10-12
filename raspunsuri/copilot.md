@@ -1,34 +1,34 @@
-# Jurnal Copilot — dovezi reale, nu prompturi inventate ulterior
+# Copilot journal — real evidence, recorded while working
 
-Cod student: [completează]
-Mod de lucru: individual / demonstrație observată + recuperare necesară [alege]
-Plan / stare acces / problemă dacă există: [completează]
+Student code: [complete]
+Work mode: individual / observed demonstration + make-up needed [choose]
+Plan / access status / problem, if any: [complete]
 
-## A. Explicația unui fragment
+## A. Explain a fragment
 
-- Fragmentul analizat: [completează]
-- Promptul exact trimis: [completează]
-- Fragment relevant din răspuns: [completează]
-- Output prezis de mine și output observat prin rulare: [completează]
-- Ce este corect / ce trebuie corectat în răspuns: [completează]
+- Selected code: [complete]
+- Exact prompt sent: [complete]
+- Relevant response excerpt: [complete]
+- My predicted output and the output observed when running: [complete]
+- What is correct / what needs correction in the response: [complete]
 
-## B. Propunere de cod limitată
+## B. Limited code suggestion
 
-- Promptul exact: [completează]
-- Cod propus de Copilot: [completează]
-- Ce am acceptat/adaptat/refuzat și de ce: [completează]
-- Explicația fiecărei linii acceptate, în cuvintele mele: [completează]
-- Teste rulate și rezultate observate: [completează]
+- Exact prompt: [complete]
+- Code suggested by Copilot: [complete]
+- What I accepted/adapted/rejected and why: [complete]
+- Each accepted line explained in my own words: [complete]
+- Tests run and results observed: [complete]
 
-## C. Critică și reformulare
+## C. Critique and improve the prompt
 
-- Promptul inițial: [completează]
-- Răspuns relevant: [completează]
-- O eroare reală sau o limitare identificată: [completează]
-- Prompt reformulat cu restricții: [completează]
-- Diferența dintre propuneri: [completează]
-- Minimum o adaptare/refuz și argumentul concret: [completează]
+- Initial prompt: [complete]
+- Relevant response: [complete]
+- A real error or limitation identified: [complete]
+- Revised prompt with constraints: [complete]
+- Difference between the suggestions: [complete]
+- At least one adaptation/rejection and a concrete reason: [complete]
 
-## Reflecție proprie
+## My reflection
 
-Ce pot explica acum fără Copilot, ce nu înțeleg încă și ce voi testa: [completează]
+What I can explain without Copilot, what I still do not understand, and what I will test: [complete]

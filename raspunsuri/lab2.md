@@ -1,34 +1,34 @@
-# Jurnal laborator 2
+# Lab 2 journal
 
-Cod student: [completează] • Username GitHub: [completează]
+Student code: [complete] • GitHub username: [complete]
 
-## Recapitulare fără AI
+## Recap without AI
 
-Diferența Save / Run / Commit / Push: [completează]
-Commit-ul L1 verificat în browser și locul unde am găsit fișierele: [completează]
+Save / Run / Commit / Push, explained separately: [complete]
+Lab 1 commit checked in the browser and where I found my files: [complete]
 
-## Depanare fără AI
+## Debugging without AI
 
-| Fișier | Predicție | Eroare exactă și linie | Cauză | Modificare minimă | Output după corectare |
+| File | Prediction | Exact error and line | Cause | Minimal change | Output after fixing |
 | --- | --- | --- | --- | --- | --- |
-| eroare_sintaxa.py | [completează] | [completează] | [completează] | [completează] | [completează] |
-| eroare_nume.py | [completează] | [completează] | [completează] | [completează] | [completează] |
-| eroare_tip.py | [completează] | [completează] | [completează] | [completează] | [completează] |
+| eroare_sintaxa.py | [complete] | [complete] | [complete] | [complete] | [complete] |
+| eroare_nume.py | [complete] | [complete] | [complete] | [complete] | [complete] |
+| eroare_tip.py | [complete] | [complete] | [complete] | [complete] | [complete] |
 
-SHA checkpoint de depanare, după commit și push: [completează]
+Debugging checkpoint SHA, after commit and push: [complete]
 
-## Testarea miniaplicației
+## Calculator tests
 
-| Caz | Predicție înainte de rulare | Output observat | Corect? Ce demonstrează? |
+| Case | Prediction before running | Observed output | Correct? What does this test demonstrate? |
 | --- | --- | --- | --- |
-| T1 Ada / 2 / 12.5 | [completează] | [completează] | [completează] |
-| T2 Lin / 0 / 9.99 | [completează] | [completează] | [completează] |
-| T3 Sam / 3 / 0.1 | [completează] | [completează] | [completează] |
-| Caz propriu: datele alese | [completează] | [completează] | [completează] |
+| T1 Ada / 2 / 12.5 | [complete] | [complete] | [complete] |
+| T2 Lin / 0 / 9.99 | [complete] | [complete] | [complete] |
+| T3 Sam / 3 / 0.1 | [complete] | [complete] | [complete] |
+| My own case: chosen inputs | [complete] | [complete] | [complete] |
 
-1. Tipul returnat de `input` și rolul `int` / `float`: [completează]
-2. Ce se întâmplă dacă elimin conversia cantității/prețului: [completează]
-3. Rolul lui `print`, separat de citire și calcul: [completează]
-4. De ce afișez două zecimale și ce face `.2f`: [completează]
-5. De ce trecerea verificatorului nu dovedește singură înțelegerea: [completează]
-6. Cum verific că profesorul vede versiunea predată: [completează]
+1. The type returned by `input` and the roles of `int` / `float`: [complete]
+2. What happens if I remove the quantity/price conversions: [complete]
+3. The role of `print`, separate from input and calculation: [complete]
+4. Why I display two decimal places and what `.2f` does: [complete]
+5. Why passing the checker alone does not demonstrate understanding: [complete]
+6. How I check that the instructor sees the submitted version: [complete]
