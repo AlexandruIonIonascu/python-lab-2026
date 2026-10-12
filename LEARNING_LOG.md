@@ -1,34 +1,34 @@
-# My learning log
+# My lab observations
 
-Keep answers short and use your own words. Complete this while working.
+Student code:
+Repository URL:
 
-Student code: [complete]
-GitHub username: [complete]
-Repository URL: [complete]
+## Save, run, and GitHub
 
-## Lab 1
+1. Where did the output of `python print_practice.py` appear? What did print do?
+   Answer:
+2. After saving a changed message, what did GitHub show before and after push?
+   Answer:
 
-- Python extension: installed now / already enabled [choose]
-- Where I write Python code and where I run it: [complete]
-- A message I changed and the output I observed: [complete]
-- What I found on GitHub after my first push: [complete]
+## Copilot: record what actually happened
 
-## Lab 2 workflow
+| Attempt | Selected model label (or Auto) | Actual model if revealed, otherwise not shown | My decision: kept / changed / rejected / observed demo |
+| --- | --- | --- | --- |
+| Chat A | | | |
+| Chat B | | | |
+| Inline | | | |
 
-- What I saw on GitHub before and after pushing my changed message: [complete]
-- Save, Run, Commit, and Push, one short phrase for each: [complete]
+One similarity or difference between the two Chat responses:
+One sentence explaining a suggestion I kept (or observed):
+Could I change Chat models? If not, what did the picker allow?
+Could I inspect or change the inline completion model?
 
-## Copilot
+## Variables and stopping
 
-- Used individually / observed demonstration [choose]
-- My explanation prompt: [complete]
-- My explanation of print in my own words: [complete]
-- One suggested print statement: [complete]
-- Accepted / changed / rejected, and why: [complete]
-- Output after running it: [complete]
+3. Why do `print("course_name")` and `print(course_name)` differ?
+   Answer:
+4. What must you check before stopping a Codespace? Does closing its tab stop it?
+   Answer:
 
-## Variables
-
-- Variable I changed, old value, and new value: [complete]
-- Which output lines changed and why: [complete]
-- Difference between `print(student_name)` and `print("student_name")`: [complete]
+Final commit URL goes in the LMS submission, not here: editing this log after
+copying a commit URL would create another change to commit and push.

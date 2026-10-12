@@ -1,14 +1,13 @@
-# Official references
+# Official documentation
 
-References checked for the course materials on 12 October 2026. The instructor
-should check current account access and interface labels before teaching.
+Checked 12 October 2026. Interfaces and available models may vary by account.
 
-- [Create a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-- [What are GitHub Codespaces?](https://docs.github.com/en/codespaces/about-codespaces/what-are-codespaces)
-- [Stop and start a Codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace)
+- [Copilot model availability](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-access-to-ai-models)
+- [Change the Chat model](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/chat-with-copilot/change-the-chat-model?tool=vscode)
+- [VS Code model selection and inline completions](https://code.visualstudio.com/docs/agent-customization/language-models)
+- [Stop and restart Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace)
 - [Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
-- [Set up Copilot in VS Code](https://code.visualstudio.com/docs/setup/copilot)
-- [Copilot plans](https://docs.github.com/en/copilot/get-started/plans)
-- [Python print and input](https://docs.python.org/3.12/library/functions.html)
-
-The original MIT license is retained in LICENSE.
+- [Python print](https://docs.python.org/3/library/functions.html#print)
+- [Classroom 50 teacher setup](https://github.com/foundation50/classroom50/wiki/Web-Teacher-Guide)
+- [Classroom 50 student guide](https://github.com/foundation50/classroom50/wiki/Web-Student-Guide)
+- [Classroom 50 prerequisites](https://github.com/foundation50/classroom50/wiki)
