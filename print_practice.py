@@ -7,10 +7,10 @@
 # Paste one reviewed print statement here.
 
 
-# === C. MY PRINT WITH CHAT HELP ===
+# === C. AI EDITS THIS PRINT ===
 # Selected model:
-# Target output: I can write this myself.
-# Write your own print statement here after discussing it in Chat.
+# Target output: Copilot edited this file.
+# Prepare an empty print here for Copilot to complete.
 
 
 # === D. INLINE SUGGESTION ===

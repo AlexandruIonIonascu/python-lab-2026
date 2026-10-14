@@ -9,7 +9,7 @@ At the end, your instructor should be able to open your completed work on GitHub
 
 | File | Your work |
 | --- | --- |
-| `print_practice.py` | Three manual prints, one Chat-generated print, one you write with Chat guidance, one inline print |
+| `print_practice.py` | Three manual prints, one Chat-generated print, one Copilot edits directly in the file, one inline print |
 | `variables.py` | Three short exercises with text variables; optional text input |
 
 This README contains the instructions.
@@ -25,7 +25,7 @@ reference pages; complete the exercises in this assignment repository.
 | 2 — Codespaces | [GitHub Codespaces quickstart](https://docs.github.com/en/codespaces/quickstart) | Introduction and Personalizing with an extension; look at the editor screenshots. Its example uses a different project; use this lab's repository and Python commands. |
 | 4 — Python | [Python: text](https://docs.python.org/3.12/tutorial/introduction.html#text) and [print](https://docs.python.org/3.12/library/functions.html#print) | The opening text/quotation examples and the first paragraph about print. Skip the later operations and optional print arguments. |
 | 5 — Upload | [VS Code: stage and commit](https://code.visualstudio.com/docs/sourcecontrol/quickstart#step-3-stage-and-commit) | The + button, message box, and Commit button. Use this lab's Push instructions for your existing repository. |
-| 6 — Copilot | [Chat requests](https://code.visualstudio.com/docs/chat/chat-overview#send-a-chat-request) and [inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions#getting-your-first-suggestions) | Sending a prompt, continuing the conversation, and accepting a faint suggestion. |
+| 6 — Copilot | [Chat requests](https://code.visualstudio.com/docs/chat/chat-overview#send-a-chat-request), [reviewing AI edits](https://code.visualstudio.com/docs/chat/chat-overview#review-and-manage-changes), and [inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions#getting-your-first-suggestions) | Sending a prompt, reviewing file edits, and accepting a faint suggestion. |
 
 For Python examples, `>>>` marks an interactive prompt: do not copy it into your
 `.py` file. We run saved files in this lab. Links checked 14 October 2026.
@@ -170,7 +170,7 @@ with the same GitHub account if requested. If missing, open Extensions and
 install or enable **GitHub Copilot**, published by Microsoft; install **GitHub
 Copilot Chat** if requested by the editor.
 
-Choose **Ask** mode if offered. Click the model name or **Auto** beside the Chat
+For B, choose **Ask** mode if offered. Click the model name or **Auto** beside the Chat
 input to inspect the model picker. A model is the system that generates the
 answer. Free and Student plans currently offer Auto; use the alternatives
 below when named models cannot be selected. No paid upgrade is required.
@@ -188,31 +188,39 @@ below when named models cannot be selected. No paid upgrade is required.
    Do not paste the Markdown fences or the conversation.
 5. In the comment `# Selected model:`, add the name you selected, or `Auto`.
 
-### C. Write a print yourself through a Chat conversation
+### C. Ask Copilot to complete a print directly in the file
 
-Your goal is to display **I can write this myself.** You will type the Python
-line yourself, using hints from Chat.
+Here Copilot edits the Python file for you. You review the change instead of
+copying a response from Chat.
 
-1. Click **New Chat**. Select a different model from B if available; otherwise
-   keep Auto. Fill in C's `# Selected model:` comment with the actual selection.
-2. Send this prompt:
+1. Open `print_practice.py` and find **C. AI EDITS THIS PRINT**. Replace
+   `# Prepare an empty print here for Copilot to complete.` with `print()`.
+   Click **File → Save All**. Leave A, B, and D unchanged.
+2. Click **New Chat**. In the mode picker beside the Chat input, choose **Edit**
+   if offered, otherwise **Agent**, so Copilot can edit files. Select a different
+   available model from B if possible; otherwise use Auto. Fill in C's
+   `# Selected model:` comment and save.
+3. Type `#` in the Chat input and select `print_practice.py` from the file
+   suggestions to attach it. Then send this prompt:
 
-   > I want to write one Python print statement that displays "I can write this myself." Guide me with one short question at a time. Do not give me the complete code and do not edit files.
+   > Edit print_practice.py directly. In section C, complete the empty print() so it displays "Copilot edited this file." Change only that print statement. Keep all section headings and all other code unchanged. Do not run commands, commit, or push.
 
-3. Answer the assistant's question **in that Chat conversation**. If a hint is
-   unclear, ask a follow-up, such as **Where do the quotation marks go?**
-4. In `print_practice.py`, find **C. MY PRINT WITH CHAT HELP**. Replace
-   `# Write your own print statement here after discussing it in Chat.` with
-   the line **you write**. Dismiss inline suggestions with Esc during this step.
-5. Copy your own attempt into the **same Chat** and ask:
+4. Wait for Copilot to finish. Click the changed `print_practice.py` shown in
+   its response to inspect the edit. Confirm that only the empty print in C was
+   completed and that A, B, and D are unchanged. If **Keep/Accept** controls are
+   shown, accept that edit. If the change is wrong, use **Undo/Reject** if shown
+   and ask Copilot in the same Chat to correct only section C.
+5. Return to the file in Explorer. Check that C contains one completed Python
+   line with the requested message, then click **File → Save All**. Do not paste
+   the Chat answer: the completed line must already be in the file.
 
-   > Here is my attempt: [paste your actual line]. Will it display the requested sentence? If it needs a correction, give me a hint, not a replacement line.
+If Copilot only replies with code, check that Edit/Agent mode is selected and
+send **Apply this change to section C in the attached file**. Ask your instructor
+for help if file editing is unavailable.
 
-6. Read the feedback and finish your own line in section C. If Chat gives the
-   full answer anyway, ask it for hints and write the line yourself.
-
-B supplies finished code; C uses conversation to help you write code. Two Auto
-chats do not prove different models: record what you actually selected.
+B uses a Chat response that you copy; C lets Copilot edit the file; D uses an
+inline completion. Two Auto chats do not prove different models: record only
+what you actually selected in the model comments.
 
 ### D. Inline suggestion
 
