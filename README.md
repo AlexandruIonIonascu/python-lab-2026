@@ -11,9 +11,8 @@ At the end, your instructor should be able to open your completed work on GitHub
 | --- | --- |
 | `print_practice.py` | Three manual prints, one Chat-generated print, one you write with Chat guidance, one inline print |
 | `variables.py` | Three short exercises with text variables; optional text input |
-| `LEARNING_LOG.md` | Your student code, repository URL, and four short observations |
 
-This README contains the instructions. Open `LEARNING_LOG.md` when asked below.
+This README contains the instructions.
 Use `TROUBLESHOOTING.md` if something does not work.
 
 ### Short official reading
@@ -61,7 +60,6 @@ Read the Codespaces row in **Short official reading** above.
    that your work was uploaded.
 4. In the editor, click **Explorer** on the left (the files icon). Open
    `README.md`. Click **Open Preview** at the top right to read it.
-5. Open `LEARNING_LOG.md`. Fill in your **student code** and **repository URL**.
 
 Codespaces provides a remote computer with a VS Code editor. Changes in this
 editor do not appear on the GitHub website until you upload them.
@@ -121,7 +119,6 @@ are typing, press **Esc** to dismiss it. Write these lines yourself.
 appear there. Quotes mark text; the quotes and `print(...)` do not appear in
 the output. Lines starting with `#` are comments and are not executed.
 
-In `LEARNING_LOG.md`, answer **question 1** in one sentence. Save All.
 
 ## 5. Upload your first work using buttons
 
@@ -139,7 +136,7 @@ Use this button sequence each time you upload work:
 1. Click **File → Save All**.
 2. Click **Source Control** on the left (the branching icon).
 3. Under **Changes**, click a filename to review your edits. At this checkpoint,
-   the changed files should be `print_practice.py` and `LEARNING_LOG.md`.
+   the changed file should be `print_practice.py`.
 4. Hover over each of those filenames and click its **+** button
    (**Stage Changes**). This selects the file for your commit and moves it to
    **Staged Changes**. Do this after saving your final edits.
@@ -236,10 +233,9 @@ Completions Model…** lets you inspect that separate setting. If absent, contin
 `python print_practice.py`. You should see **six lines**: three from A, one from
 B, one from C, and one from D. If necessary, fix the relevant section and rerun.
 
-Answer **question 2** in `LEARNING_LOG.md`: record the model labels and one
-useful hint from your conversation in C. If Chat is unavailable, watch the
-instructor demo and write the missing lines manually. Label the fallback in the
-log; your instructor will arrange hands-on follow-up when access is available.
+If Chat is unavailable, watch the instructor demo and write the missing lines
+manually. Tell your instructor which feature was unavailable; they will arrange
+hands-on follow-up when access is available.
 
 ## 7. Complete three small variable exercises
 
@@ -264,7 +260,7 @@ section headings. Complete all three sections **before running**:
 
 Write these yourself. You may ask Copilot to explain one line if needed.
 Click **File → Save All**, then run `python variables.py` once. Check the six
-output lines against the table. Answer **question 3** in `LEARNING_LOG.md`.
+output lines against the table.
 
 **Optional:** under **D. OPTIONAL INPUT**, replace the write-here comment with
 `colour = input("Favourite colour: ")` and `print(colour)` on separate lines.
@@ -273,18 +269,16 @@ Enter. `input` gives you text, which is stored in `colour` and then printed.
 
 ## 8. Upload and submit your finished work
 
-1. Answer **question 4** in `LEARNING_LOG.md` after reading step 9 below.
-2. Click **File → Save All**. Your Python programs should have run successfully.
-3. Repeat the buttons in step 5: **Source Control → review changes → + beside
+1. Click **File → Save All**. Your Python programs should have run successfully.
+2. Repeat the buttons in step 5: **Source Control → review changes → + beside
    each changed assignment file → message → Commit → … → Push**.
-   This time include `print_practice.py`, `variables.py`, and `LEARNING_LOG.md`.
+   This time include `print_practice.py` and `variables.py`.
    Use the message **Complete my first Python lab**.
-4. After Push finishes, check that **Changes** and **Staged Changes** are empty.
+3. After Push finishes, check that **Changes** and **Staged Changes** are empty.
    Empty lists alone do not prove upload: also perform the next check.
-5. Refresh GitHub. Open both Python files and `LEARNING_LOG.md`; check that the
-   completed sections and answers appear. Confirm the latest commit message is
-   **Complete my first Python lab**.
-6. Click that commit message to open the commit, then copy its browser URL.
+4. Refresh GitHub. Open both Python files and check that the completed sections
+   appear. Confirm the latest commit message is **Complete my first Python lab**.
+5. Click that commit message to open the commit, then copy its browser URL.
    Submit your **student code, repository URL, and final commit URL** in the
    LMS/form specified by your instructor.
 
