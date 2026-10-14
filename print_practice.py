@@ -2,14 +2,15 @@
 # Write your three print statements here.
 
 
-# === B. CHAT — FIRST RESPONSE ===
+# === B. PRINT FROM CHAT ===
 # Selected model:
 # Paste one reviewed print statement here.
 
 
-# === C. CHAT — SECOND RESPONSE ===
+# === C. MY PRINT WITH CHAT HELP ===
 # Selected model:
-# Paste one reviewed print statement here.
+# Target output: I can write this myself.
+# Write your own print statement here after discussing it in Chat.
 
 
 # === D. INLINE SUGGESTION ===

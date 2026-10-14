@@ -6,10 +6,11 @@ Repository URL:
 1. Where did your print output appear? What does print do?
    Answer:
 
-2. Record your selected Chat models and how you used inline suggestions.
-   Chat B selected model (or Auto / unavailable):
-   Chat C selected model (or Auto / unavailable):
-   Inline: accepted / changed / rejected / wrote manually / observed demo:
+2. Record how you used the three AI activities.
+   B — generated print: selected model (or Auto / unavailable):
+   C — guided conversation: selected model (or Auto / unavailable):
+   One question you asked or useful hint from C:
+   D — Inline: accepted / changed / rejected / wrote manually / observed demo:
    Explain one line you kept:
 
 3. Why did section B of variables.py print two different things?

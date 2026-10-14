@@ -9,13 +9,27 @@ At the end, your instructor should be able to open your completed work on GitHub
 
 | File | Your work |
 | --- | --- |
-| `print_practice.py` | Three prints you write, two prints from Copilot Chat, one inline print |
+| `print_practice.py` | Three manual prints, one Chat-generated print, one you write with Chat guidance, one inline print |
 | `variables.py` | Three short exercises with text variables; optional text input |
 | `LEARNING_LOG.md` | Your student code, repository URL, and four short observations |
 
 This README contains the instructions. Open `LEARNING_LOG.md` when asked below.
-The other Markdown guides are optional reminders. Use `TROUBLESHOOTING.md` if
-something does not work.
+Use `TROUBLESHOOTING.md` if something does not work.
+
+### Short official reading
+
+Read the indicated parts when you reach the matching step below. These are
+reference pages; complete the exercises in this assignment repository.
+
+| Before step | Official page | What to read |
+| --- | --- | --- |
+| 2 — Codespaces | [GitHub Codespaces quickstart](https://docs.github.com/en/codespaces/quickstart) | Introduction and Personalizing with an extension; look at the editor screenshots. Its example uses a different project; use this lab's repository and Python commands. |
+| 4 — Python | [Python: text](https://docs.python.org/3.12/tutorial/introduction.html#text) and [print](https://docs.python.org/3.12/library/functions.html#print) | The opening text/quotation examples and the first paragraph about print. Skip the later operations and optional print arguments. |
+| 5 — Upload | [VS Code: stage and commit](https://code.visualstudio.com/docs/sourcecontrol/quickstart#step-3-stage-and-commit) | The + button, message box, and Commit button. Use this lab's Push instructions for your existing repository. |
+| 6 — Copilot | [Chat requests](https://code.visualstudio.com/docs/chat/chat-overview#send-a-chat-request) and [inline suggestions](https://code.visualstudio.com/docs/editing/ai-powered-suggestions#getting-your-first-suggestions) | Sending a prompt, continuing the conversation, and accepting a faint suggestion. |
+
+For Python examples, `>>>` marks an interactive prompt: do not copy it into your
+`.py` file. We run saved files in this lab. Links checked 14 October 2026.
 
 ## 1. Open your own assignment
 
@@ -37,6 +51,8 @@ Check the owner and name at the top. Work in your assignment copy. A repository
 is the project's files and recorded versions; GitHub holds the online copy.
 
 ## 2. Open Codespaces and the files
+
+Read the Codespaces row in **Short official reading** above.
 
 1. In your assignment repository, click **Code → Codespaces**.
 2. Click an existing Codespace if listed. Otherwise click **Create codespace
@@ -80,6 +96,8 @@ Find `print_practice.py` in both Explorer and the `ls` output.
 
 ## 4. Write three print statements yourself
 
+Read the Python row in **Short official reading** above.
+
 Open `print_practice.py`. Find **A. MY PRINTS**. Replace only the comment
 `# Write your three print statements here.` with these three lines:
 
@@ -106,6 +124,8 @@ the output. Lines starting with `#` are comments and are not executed.
 In `LEARNING_LOG.md`, answer **question 1** in one sentence. Save All.
 
 ## 5. Upload your first work using buttons
+
+Read the Upload row in **Short official reading** above.
 
 | Action | What it does |
 | --- | --- |
@@ -141,6 +161,8 @@ keep the Codespace open and ask for help.
 
 ## 6. Add prints with Copilot in the marked sections
 
+Read the Copilot row in **Short official reading** above.
+
 You will add **one line to B, one to C, and one to D**. Keep your three lines
 in A. Copilot is an AI assistant; read its suggestions before using them.
 
@@ -156,7 +178,7 @@ input to inspect the model picker. A model is the system that generates the
 answer. Free and Student plans currently offer Auto; use the alternatives
 below when named models cannot be selected. No paid upgrade is required.
 
-### B. First Chat suggestion
+### B. Get one complete print from Chat
 
 1. Choose an available model, or leave **Auto** selected.
 2. Send this prompt:
@@ -164,22 +186,36 @@ below when named models cannot be selected. No paid upgrade is required.
    > Give me exactly one Python print statement that displays "Hello from Copilot Chat." Return only that line. Do not edit my files.
 
 3. Read the answer. It should use only `print` and quoted text.
-4. In `print_practice.py`, under **B. CHAT — FIRST RESPONSE**, replace
+4. In `print_practice.py`, under **B. PRINT FROM CHAT**, replace
    `# Paste one reviewed print statement here.` with **only the Python line**.
    Do not paste the Markdown fences or the conversation.
 5. In the comment `# Selected model:`, add the name you selected, or `Auto`.
 
-### C. Second Chat suggestion
+### C. Write a print yourself through a Chat conversation
 
-1. Click **New Chat** (the plus button in Chat). Select a different model if
-   your picker permits it. Otherwise use Auto again and watch the instructor's
-   demonstration of model selection.
-2. Send the **same prompt** from B.
-3. Paste one reviewed Python line into **C. CHAT — SECOND RESPONSE**, replacing
-   its paste-here comment. Complete that section's `# Selected model:` comment.
+Your goal is to display **I can write this myself.** You will type the Python
+line yourself, using hints from Chat.
 
-The two suggestions may be identical; that is fine. Two Auto requests are not
-proof of different models. Record only what you can actually select.
+1. Click **New Chat**. Select a different model from B if available; otherwise
+   keep Auto. Fill in C's `# Selected model:` comment with the actual selection.
+2. Send this prompt:
+
+   > I want to write one Python print statement that displays "I can write this myself." Guide me with one short question at a time. Do not give me the complete code and do not edit files.
+
+3. Answer the assistant's question **in that Chat conversation**. If a hint is
+   unclear, ask a follow-up, such as **Where do the quotation marks go?**
+4. In `print_practice.py`, find **C. MY PRINT WITH CHAT HELP**. Replace
+   `# Write your own print statement here after discussing it in Chat.` with
+   the line **you write**. Dismiss inline suggestions with Esc during this step.
+5. Copy your own attempt into the **same Chat** and ask:
+
+   > Here is my attempt: [paste your actual line]. Will it display the requested sentence? If it needs a correction, give me a hint, not a replacement line.
+
+6. Read the feedback and finish your own line in section C. If Chat gives the
+   full answer anyway, ask it for hints and write the line yourself.
+
+B supplies finished code; C uses conversation to help you write code. Two Auto
+chats do not prove different models: record what you actually selected.
 
 ### D. Inline suggestion
 
@@ -200,7 +236,8 @@ Completions Model…** lets you inspect that separate setting. If absent, contin
 `python print_practice.py`. You should see **six lines**: three from A, one from
 B, one from C, and one from D. If necessary, fix the relevant section and rerun.
 
-Answer **question 2** in `LEARNING_LOG.md`. If Chat is unavailable, watch the
+Answer **question 2** in `LEARNING_LOG.md`: record the model labels and one
+useful hint from your conversation in C. If Chat is unavailable, watch the
 instructor demo and write the missing lines manually. Label the fallback in the
 log; your instructor will arrange hands-on follow-up when access is available.
 
