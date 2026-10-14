@@ -1,9 +1,18 @@
-# A: Print two messages on separate lines.
+# === A. NAME AND COURSE ===
+# Store Alex in student_name and Python in course_name; print each variable.
+# Write your code here.
 
-# B: Define student_name and course_name, then print each variable.
 
-# C: Print the literal text "course_name" and the value of course_name.
+# === B. TEXT OR VARIABLE ===
+# Print the text "course_name", then print the variable course_name.
+# Write your code here.
 
-# D: Print status_message before and after assigning it a different value.
 
-# Optional: Store text from input in colour, then print colour.
+# === C. A NEW VALUE ===
+# Assign Ready to status_message and print it; assign Finished and print again.
+# Write your code here.
+
+
+# === D. OPTIONAL INPUT ===
+# Store a favourite colour from input in colour, then print colour.
+# Write your optional code here.

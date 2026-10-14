@@ -1,8 +1,6 @@
-# Copilot quick reminder
+# Copilot reminder
 
-Use the Chat and inline exercises in [README.md](README.md). Review every
-suggestion, predict output, save, run, and explain it. The Chat model picker and
-inline completion model are separate. Free and Student plans currently use Auto
-for Chat; record actual availability and use the instructor demonstration when
-manual model selection is unavailable. Record your own observations in
-[LEARNING_LOG.md](LEARNING_LOG.md), including any manual fallback.
+Follow README.md, step 6. In print_practice.py, put your first Chat line under B,
+your second under C, and one inline line under D. Keep manual work under A.
+Record selected model labels honestly. Chat model choice and inline completion
+model choice are separate. Read each suggestion before using it, then save and run.

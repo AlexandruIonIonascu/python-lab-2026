@@ -1,7 +1,17 @@
-# Manual work: write three print statements yourself.
+# === A. MY PRINTS ===
+# Write your three print statements here.
 
-# Chat A: add one reviewed print statement and its selected model label.
 
-# Chat B: use the same prompt in a new chat; record the selected model label.
+# === B. CHAT — FIRST RESPONSE ===
+# Selected model:
+# Paste one reviewed print statement here.
 
-# Inline: add one reviewed print statement; label manual fallback honestly.
+
+# === C. CHAT — SECOND RESPONSE ===
+# Selected model:
+# Paste one reviewed print statement here.
+
+
+# === D. INLINE SUGGESTION ===
+# Print the sentence: Hello from an inline suggestion.
+# Start typing your print statement here.

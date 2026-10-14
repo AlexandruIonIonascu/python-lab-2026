@@ -1,7 +1,6 @@
-# Codespaces quick reminder
+# Codespaces reminder
 
-All instructions are in [README.md](README.md), including extension installation,
-terminal commands, safe stopping, extra running Codespaces, and resuming.
-Use one Codespace for this assignment. Before stopping: Save All, run, commit,
-push, and verify GitHub. In Your Codespaces, match its name and repository,
-then choose … → Stop codespace. Closing a browser tab alone does not stop it.
+Follow README.md for setup and stopping. Reopen your existing Codespace rather
+than creating another copy. Before stopping, save, commit, push, and check GitHub.
+On Your Codespaces, match the name and repository, then choose … → Stop codespace.
+Closing the editor tab alone does not stop the remote computer immediately.

@@ -1,13 +1,12 @@
-# Final reminder
+# Submission reminder
 
-The complete submission and stopping procedure is in [README.md](README.md).
+Follow README.md, steps 8 and 9.
 
-- [ ] Finish `print_practice.py`, `variables.py`, and `LEARNING_LOG.md`.
-- [ ] File → Save All, then run both programs.
-- [ ] Inspect changes, commit, and push successfully.
-- [ ] Check no pending changes or unpushed commits remain.
-- [ ] Refresh GitHub and inspect the final code and commit.
-- [ ] Ensure instructor access.
-- [ ] Submit student code, repository URL, and final commit URL in the announced LMS/form.
-- [ ] Inspect other running Codespaces for work before stopping them.
-- [ ] Stop the correct Codespace through Your Codespaces → … → Stop codespace.
+- [ ] Complete print_practice.py, variables.py, and LEARNING_LOG.md.
+- [ ] Save All; check the programs ran successfully.
+- [ ] Source Control → + beside each changed assignment file → message → Commit.
+- [ ] Source Control → … → Push; wait for upload to finish.
+- [ ] Refresh GitHub and inspect the completed files and latest commit.
+- [ ] Ensure instructor access and submit the required links in the LMS/form.
+- [ ] Preserve work in any extra running Codespaces before stopping them.
+- [ ] Your Codespaces → correct name/repository → … → Stop codespace.

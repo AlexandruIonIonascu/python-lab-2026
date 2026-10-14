@@ -1,7 +1,6 @@
-# Python quick reminder
+# Python reminder
 
-The examples and exercises are in [README.md](README.md).
-`print("Hello")` displays text when the interpreter runs your file.
-`name = "Alex"` stores text in a variable; `print(name)` displays its value.
-`print("name")` displays the word name. Save first, then run the named `.py`
-file in the terminal. Text input is optional; additional Python topics come later.
+Follow README.md, steps 4 and 7. Write code in the marked .py sections and run
+it in the terminal. print displays a value. A variable names a stored value:
+name = "Alex" stores text; print(name) displays Alex; print("name") displays name.
+Save your file before running it.

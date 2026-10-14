@@ -1,366 +1,275 @@
-# Your first Python lab: GitHub, Codespaces, and Copilot
+# Your first Python lab
 
-**One beginner lab • allow up to 120 minutes • individual work • English**
+**GitHub • Codespaces • Copilot • print and variables**
 
-Follow this README from start to finish. It contains all required instructions;
-there is no separate Lab 1 or Lab 2. You will practise the tools first, then
-finish with small exercises using `print` and text variables.
+One beginner session, with room for up to 120 minutes. Follow this page in order.
+At the end, your instructor should be able to open your completed work on GitHub.
 
-## Before you start
+## What you will complete
 
-Have a GitHub account with a verified email and the assignment link from your
-instructor. Use the same account throughout. Your instructor will announce the
-submission location, student code, and deadline.
+| File | Your work |
+| --- | --- |
+| `print_practice.py` | Three prints you write, two prints from Copilot Chat, one inline print |
+| `variables.py` | Three short exercises with text variables; optional text input |
+| `LEARNING_LOG.md` | Your student code, repository URL, and four short observations |
 
-You need a browser; Python runs inside Codespaces. Copilot availability depends
-on your account. You do not need to buy a plan for this lab. If a feature is
-unavailable, tell your instructor and record that honestly.
+This README contains the instructions. Open `LEARNING_LOG.md` when asked below.
+The other Markdown guides are optional reminders. Use `TROUBLESHOOTING.md` if
+something does not work.
 
-## 1. Get your assignment repository
+## 1. Open your own assignment
 
-Use **only the distribution method your instructor announced**.
+Sign in to GitHub with your verified account. Follow the route your instructor
+announced:
 
-**If you received a Classroom 50 assignment link:**
+**Classroom 50 link:** open the assignment link, sign in, accept the course
+organization invitation if prompted, and click **Accept assignment → Open
+repository**. If it says **Not a member yet**, ask the instructor for help.
 
-1. Open that link and sign in with GitHub. Read the authorization screen.
-2. Accept your course organization's invitation if prompted. If you see
-   **Not a member yet**, ask your instructor to add your GitHub username to the roster.
-3. Click **Accept assignment**. Wait for setup, then click **Open repository**.
-4. Use this generated repository for all work. Skip the template steps below;
-   instructor access is managed through the course organization.
+**GitHub template link:** open [the template](https://github.com/AlexandruIonIonascu/python-lab-2026),
+click **Use this template → Create a new repository**, choose your own account
+as Owner, name it `python-lab-2026-CODE` using your assigned student code, select
+**Private**, and click **Create repository**. In your copy, click
+**Settings → Collaborators → Add people** and invite `AlexandruIonIonascu`.
+Your instructor must accept the invitation.
 
-**If you received the GitHub template link:**
+Check the owner and name at the top. Work in your assignment copy. A repository
+is the project's files and recorded versions; GitHub holds the online copy.
 
-1. Open [the course template](https://github.com/AlexandruIonIonascu/python-lab-2026).
-2. Click **Use this template → Create a new repository**.
-3. Choose your own account as Owner. Name it `python-lab-2026-CODE`, replacing
-   `CODE` with the student code your instructor gave you. Choose **Private**,
-   then **Create repository**.
-4. In your copy, click **Settings → Collaborators → Add people** and invite
-   `AlexandruIonIonascu`. Your instructor must accept before they can read it.
-
-Check the owner and repository name at the top of GitHub. This must be your
-assignment repository, rather than the instructor's source template.
-
-A **repository** is a project containing files and their recorded history.
-GitHub hosts a copy online. Open `print_practice.py` on GitHub: it contains
-starter comments, not your completed work yet.
-
-## 2. Open Codespaces and find your files
+## 2. Open Codespaces and the files
 
 1. In your assignment repository, click **Code → Codespaces**.
-2. If an existing Codespace is listed, click its name. Otherwise click
-   **Create codespace on main** and wait for the editor to open.
-3. Keep the GitHub repository open in another browser tab for checking pushes.
-4. In the editor, click **Explorer** on the left. Click `README.md` and use
-   **Open Preview** at the top right to read it, or the Command Palette command
-   **Markdown: Open Preview**. Keep this guide available while editing code.
+2. Click an existing Codespace if listed. Otherwise click **Create codespace
+   on main** and wait for the editor.
+3. Keep the GitHub repository in another browser tab. You will use it to check
+   that your work was uploaded.
+4. In the editor, click **Explorer** on the left (the files icon). Open
+   `README.md`. Click **Open Preview** at the top right to read it.
+5. Open `LEARNING_LOG.md`. Fill in your **student code** and **repository URL**.
 
-A **Codespace** is a remote development computer. The browser shows its VS Code
-editor. Its files can change without the GitHub website changing: you must
-commit and push to send your work there. Each Codespace has its own working
-files; making a second one does not copy uncommitted changes from the first.
+Codespaces provides a remote computer with a VS Code editor. Changes in this
+editor do not appear on the GitHub website until you upload them.
 
-| File or folder | What it is for |
-| --- | --- |
-| `README.md` | The complete lab sequence; read it in order |
-| `print_practice.py` | Your manual, Chat, and inline print statements |
-| `variables.py` | The final small Python exercises |
-| `LEARNING_LOG.md` | Your short answers and actual Copilot observations; fill it when asked below |
-| `SUBMISSION.md` | Optional quick reminder of the final checklist already included here |
-| `GITHUB_GUIDE.md`, `CODESPACES_GUIDE.md`, `COPILOT_GUIDE.md`, `PYTHON_GUIDE.md` | Optional short reminders; no additional exercises |
-| `TROUBLESHOOTING.md` | Read only the relevant row if something goes wrong |
-| `.devcontainer/` | Prepares Python in the Codespace |
-| `.github/` | Contains beginner guidance for Copilot |
-| `.gitignore` | Keeps generated files out of Git |
-| `SOURCES.md`, `LICENSE` | Documentation links and reuse terms; no required exercises |
+In Explorer, `.py` files contain Python instructions and `.md` files contain
+formatted text. Folders group files. Leave `.github/`, `.devcontainer/`, and
+`.gitignore` unchanged: they prepare the environment.
 
-`.md` means Markdown: readable text with headings and formatting. `.py` means
-Python source code. A folder groups files. Do not edit the configuration folders.
+## 3. Prepare Python and the terminal
 
-**Do it:** open both Python files in Explorer. Find the same filenames in your
-GitHub tab. Open `LEARNING_LOG.md` and fill in your student code and repository URL.
-
-## 3. Install the Python extension and open a terminal
-
-Python is a programming language. A Python **interpreter** executes the
-instructions you write in a `.py` file. An editor helps you write those
-instructions; the Python extension adds Python support to VS Code.
+Python is a programming language. Its interpreter runs the instructions in
+`.py` files. The Python extension helps the editor work with those files.
 
 1. Click **Extensions** on the left (the blocks icon).
-2. Search for **Python**. Choose the extension published by **Microsoft**
-   (`ms-python.python`) and click **Install**. If installed already, verify that
-   it is enabled in this Codespace. This does not install an extension on your laptop.
-3. Open `print_practice.py`. Open the Command Palette with **F1**, type
-   **Python: Select Interpreter**, and select the provided Python 3 interpreter.
-4. Open the editor menu at the top left: **Terminal → New Terminal**.
-   If browser shortcuts interfere, use the Command Palette command
-   **Terminal: Create New Terminal**.
+2. Search **Python**, select **Microsoft — Python** (`ms-python.python`), and
+   click **Install**. If installed already, check that it is enabled.
+3. Open `print_practice.py`. Press **F1**, find **Python: Select Interpreter**,
+   and select the supplied Python 3 interpreter.
+4. Click the editor's top-left menu → **Terminal → New Terminal**. If that menu
+   is hidden, press F1 and choose **Terminal: Create New Terminal**.
+5. Type these commands in the terminal, pressing **Enter** after each:
 
-A **terminal** is a place to type commands for the remote computer. Type the
-following commands there, **one at a time**, pressing **Enter** after each:
+   ```bash
+   pwd
+   ls
+   python --version
+   ```
 
-```bash
-pwd
-ls
-python --version
-git remote -v
-```
+The terminal accepts commands for the Codespace computer. `pwd` shows the current
+folder; `ls` lists its files; the last command shows the Python version.
+Find `print_practice.py` in both Explorer and the `ls` output.
 
-`pwd` shows the current folder. `ls` lists its files. `python --version` confirms
-that the interpreter works. `git remote -v` shows where pushes will go: the URL
-must identify your assignment repository.
+## 4. Write three print statements yourself
 
-**Do it:** point to `print_practice.py` in both Explorer and the `ls` output.
-Explain which tab is the editor and which tab shows GitHub's online copy.
-Commands go in the terminal; Python program lines go in the `.py` file.
-
-## 4. Write, save, and run your first prints
-
-In `print_practice.py`, below the manual-work comment, type these lines yourself.
-Use a fictional name or your first name:
+Open `print_practice.py`. Find **A. MY PRINTS**. Replace only the comment
+`# Write your three print statements here.` with these three lines:
 
 ```python
 print("Hello, Python!")
-print("My name is Alex.")
-print("I can run a Python file in a terminal.")
+print("I am learning to use Codespaces.")
+print("This is my first program.")
 ```
 
-`print` sends a value to the program's output. In this lab you run the program
-in a terminal, so that is where you see the output. Quotation marks identify
-text. Each of these calls prints one line. The quotes and `print(...)` are
-instructions; they do not appear in the displayed text.
+Leave sections B, C, and D empty for now. If an AI suggestion appears while you
+are typing, press **Esc** to dismiss it. Write these lines yourself.
 
-1. Click the editor menu **File → Save**, or press **Ctrl+S**
-   (**Cmd+S** on macOS). **File → Save All** saves every edited file.
-   The unsaved dot on a file's tab should disappear. Autosave is off in this lab.
-2. Before running, predict the three output lines.
-3. In the terminal, run:
+1. Click the editor menu **File → Save All**. The unsaved dots on file tabs
+   should disappear. You can also save a single file with **Ctrl+S** or
+   **Cmd+S** on macOS.
+2. Predict the three lines you will see.
+3. In the terminal, type `python print_practice.py` and press **Enter**.
+4. Check that the output matches the three messages, in that order.
 
-   ```bash
-   python print_practice.py
-   ```
+`print` displays a value. Here, Python runs in the terminal, so the messages
+appear there. Quotes mark text; the quotes and `print(...)` do not appear in
+the output. Lines starting with `#` are comments and are not executed.
 
-4. Compare the output with your prediction. Change the second message, save,
-   and run again. Earlier terminal output does not update automatically.
-5. Swap the first and third Python lines, save, and run. Notice execution order.
-6. Add `# This is my first program` on its own line. A line starting with `#`
-   is a comment for a reader; Python does not print it.
+In `LEARNING_LOG.md`, answer **question 1** in one sentence. Save All.
 
-If Python reports an error, read the filename and line number. Check matching
-quotes and parentheses, save, and rerun. Ask for a hint if needed.
+## 5. Upload your first work using buttons
 
-**Do it:** in `LEARNING_LOG.md`, answer the print/output question in your own words.
-
-## 5. Make your first commit and push
-
-These are four different actions:
-
-| Action | What happens |
+| Action | What it does |
 | --- | --- |
-| Save | Your editor writes changes into the Codespace's files |
-| Run | Python executes the saved program and shows output |
-| Commit | Git records a snapshot of selected changes in this Codespace |
-| Push | Git sends your commits to the repository on GitHub |
+| Save | Writes your edits into the Codespace's files |
+| Run | Executes the saved Python file |
+| Commit | Records a version of your selected files in the Codespace |
+| Push | Uploads that version to GitHub |
 
-**Save alone is not submission. Commit alone is not submission.**
+Use this button sequence each time you upload work:
 
 1. Click **File → Save All**.
-2. In the terminal, run `git status`. Read which files changed.
-3. Click **Source Control** on the left (the branching icon), then click a
-   changed filename to inspect the difference. Return to the terminal.
-4. Type these commands one at a time:
+2. Click **Source Control** on the left (the branching icon).
+3. Under **Changes**, click a filename to review your edits. At this checkpoint,
+   the changed files should be `print_practice.py` and `LEARNING_LOG.md`.
+4. Hover over each of those filenames and click its **+** button
+   (**Stage Changes**). This selects the file for your commit and moves it to
+   **Staged Changes**. Do this after saving your final edits.
+5. In the message box at the top of Source Control, type
+   **Write my first Python prints**.
+6. Click **Commit**. If its button offers several actions, choose **Commit**.
+   Wait for it to finish. The files should disappear from Staged Changes.
+7. Open your GitHub tab and refresh. Your new code is still not there: you have
+   recorded it in Codespaces but have not pushed it yet.
+8. Return to Source Control. Click the **…** menu at the top of that panel →
+   **Push**. If it is in a **Pull, Push** submenu, open that submenu and choose
+   **Push**. Wait for the upload to finish.
+9. Refresh GitHub again. Click `print_practice.py` and check that your three
+   statements appear. Your commit message should also appear in the history.
 
-   ```bash
-   git add print_practice.py LEARNING_LOG.md
-   git commit -m "Write and run my first print statements"
-   git push
-   ```
+**Check:** show the instructor or your partner your code on GitHub. You will
+use the same buttons once more at the end. If Commit or Push reports an error,
+keep the Codespace open and ask for help.
 
-   `git add` selects file changes for the next commit. `-m` supplies a short
-   message explaining that commit. Wait for each command to finish.
-5. Refresh your GitHub repository tab. Open `print_practice.py`. Check that your
-   changed text appears. Find your commit message in the repository history.
+## 6. Add prints with Copilot in the marked sections
 
-**Do it:** change one printed message again and save. Refresh GitHub **before**
-pushing: you should still see the previous text. Run the program, repeat the
-commands above with the message `Update a print message`, and refresh again.
-Now GitHub should show the new text. Explain the difference to your partner.
+You will add **one line to B, one to C, and one to D**. Keep your three lines
+in A. Copilot is an AI assistant; read its suggestions before using them.
 
-If a commit or push fails, keep the Codespace open and ask for help. A clean
-working folder does not prove that a commit has been pushed.
+### Open Chat and choose a model
 
-## 6. Use Copilot Chat and inspect the model picker
+Click the **Copilot/Chat icon** in the editor's top bar and open Chat. Sign in
+with the same GitHub account if requested. If missing, open Extensions and
+install or enable **GitHub Copilot**, published by Microsoft; install **GitHub
+Copilot Chat** if requested by the editor.
 
-Copilot is an AI assistant. An **LLM model** is the underlying system producing
-its answers. You still decide which code to keep, run it, and explain it.
+Choose **Ask** mode if offered. Click the model name or **Auto** beside the Chat
+input to inspect the model picker. A model is the system that generates the
+answer. Free and Student plans currently offer Auto; use the alternatives
+below when named models cannot be selected. No paid upgrade is required.
 
-1. Click the Copilot/Chat icon in the editor's top bar, then **Open Chat** if a
-   menu appears. Follow any sign-in instructions using your GitHub account.
-2. If Chat is unavailable, open Extensions and install or enable Microsoft's
-   **GitHub Copilot** extension. Install **GitHub Copilot Chat** if the editor
-   requests it. Tell your instructor if your account has no access or hits a limit.
-3. Use **Ask** mode if offered. Keep edits under your control: copy a small
-   suggestion yourself into `print_practice.py`.
-4. Find the model name or **Auto** near the Chat input. Click it to inspect
-   the model picker. Model choices depend on your plan and organization policies.
+### B. First Chat suggestion
 
-### Chat comparison: the same prompt twice
+1. Choose an available model, or leave **Auto** selected.
+2. Send this prompt:
 
-Use this prompt:
+   > Give me exactly one Python print statement that displays "Hello from Copilot Chat." Return only that line. Do not edit my files.
 
-> Suggest exactly one Python print statement that displays "I checked this suggestion." Explain it in one short sentence. Do not edit files. Do not use variables or other Python features.
+3. Read the answer. It should use only `print` and quoted text.
+4. In `print_practice.py`, under **B. CHAT — FIRST RESPONSE**, replace
+   `# Paste one reviewed print statement here.` with **only the Python line**.
+   Do not paste the Markdown fences or the conversation.
+5. In the comment `# Selected model:`, add the name you selected, or `Auto`.
 
-**If you can select named models:** choose one available model, send the prompt,
-then start a **New Chat** with the plus button, choose a different available
-model in the picker, and send the identical prompt. If a model asks you to
-approve paid usage, ask the instructor for the alternative exercise instead.
+### C. Second Chat suggestion
 
-**If your picker only offers Auto:** Copilot Free and Copilot Student currently
-use automatic model selection. Send the prompt in two new Auto chats and watch
-the instructor demonstrate manual switching on an account that supports it.
-Do not claim that two Auto requests necessarily used different models. If the
-response reveals its actual model when you hover over it, you may record it;
-otherwise write `not shown`. You do not need an upgrade or an API key.
+1. Click **New Chat** (the plus button in Chat). Select a different model if
+   your picker permits it. Otherwise use Auto again and watch the instructor's
+   demonstration of model selection.
+2. Send the **same prompt** from B.
+3. Paste one reviewed Python line into **C. CHAT — SECOND RESPONSE**, replacing
+   its paste-here comment. Complete that section's `# Selected model:` comment.
 
-For each response, read the suggestion, predict its output, and add one chosen
-print line under the matching Chat comment in `print_practice.py`. Add a comment
-with the model label you actually selected, for example `# Chat A: Auto`.
-Save and run the file. Two models may give identical correct code; that is fine.
-If a response uses extra concepts, reject it and repeat the restricted prompt.
+The two suggestions may be identical; that is fine. Two Auto requests are not
+proof of different models. Record only what you can actually select.
 
-In `LEARNING_LOG.md`, fill in both Chat rows and one short comparison. The
-**mode** (such as Ask) and the **model** are separate choices.
+### D. Inline suggestion
 
-## 7. Try one inline suggestion
+1. Find **D. INLINE SUGGESTION** in the same file. Leave its instruction comment
+   `# Print the sentence: Hello from an inline suggestion.` in place.
+2. Replace `# Start typing your print statement here.` by beginning to type
+   `print(`. Wait for a faint suggestion in the editor.
+3. Read it. **Tab** accepts the suggestion; **Esc** rejects it. Keep exactly one
+   complete print statement under D. If no suggestion appears, ask for help,
+   then write the line manually and tell the instructor.
 
-An inline suggestion appears as faint text inside the code editor, rather than
-as a Chat message. Changing the Chat model does **not** change the inline model.
+Inline suggestions appear inside the editor; Chat responses appear in the Chat
+panel. Changing the Chat model does not change the inline completion model.
+If available, the top-bar Chat menu → **Configure Inline Suggestions… → Change
+Completions Model…** lets you inspect that separate setting. If absent, continue.
 
-1. In `print_practice.py`, find the inline section and type:
+**Now save and run once:** click File → Save All, then run
+`python print_practice.py`. You should see **six lines**: three from A, one from
+B, one from C, and one from D. If necessary, fix the relevant section and rerun.
 
-   ```python
-   # Print the sentence: I reviewed an inline suggestion.
-   ```
+Answer **question 2** in `LEARNING_LOG.md`. If Chat is unavailable, watch the
+instructor demo and write the missing lines manually. Label the fallback in the
+log; your instructor will arrange hands-on follow-up when access is available.
 
-2. Press **Enter** and begin typing `print(`. Wait for a faint completion.
-   If none appears, check the Copilot status menu and enable completions for Python.
-3. Read it before accepting. **Tab** accepts; **Esc** dismisses it.
-   Keep only a simple statement you understand. If necessary, finish it manually.
-4. Save and run the file. Explain which text came from you and which from Copilot.
-5. If your editor offers it, open the top-bar Chat menu →
-   **Configure Inline Suggestions… → Change Completions Model…**.
-   Inspect the choices and try another completion model if available. This is
-   separate from the Chat picker. If absent, record `not available` and continue.
+## 7. Complete three small variable exercises
 
-Record your decision and the inline model if shown in `LEARNING_LOG.md`.
-If suggestions are unavailable, watch the instructor demo, write the print
-manually, and label it accordingly; your instructor will arrange a short
-hands-on follow-up if needed. Never label manual work as AI-generated.
-
-Save all files, run the program, then repeat the commit/push routine:
-
-```bash
-git add print_practice.py LEARNING_LOG.md
-git commit -m "Practise Copilot Chat and inline suggestions"
-git push
-```
-
-Refresh GitHub and verify the new lines before moving on.
-
-## 8. Finish with simple print and variable exercises
-
-A **variable** is a name for a value. Assignment stores a value under that name:
+A variable is a name for a value. For example:
 
 ```python
-student_name = "Alex"
-print(student_name)
-print("student_name")
+name = "Alex"
+print(name)
 ```
 
-The second line prints `Alex`. The third prints the literal text `student_name`.
-Quotes distinguish text from a variable name. Python names are case-sensitive:
-`student_name` and `Student_name` are different names. Define a variable before
-using it. `=` assigns a value; it is not an instruction to print anything.
+`=` stores the text under the name. `print(name)` displays its value. Names
+must be defined before use, and spelling/capitalization must match.
 
-Open `variables.py`. Complete A–D in order under the starter comments. Write
-these yourself first; use Copilot for a small explanation if you get stuck.
-After **each** exercise, save and run `python variables.py`.
+Open `variables.py`. Replace each write-here comment with your code, keeping the
+section headings. Complete all three sections **before running**:
 
-**A — Two messages.** Write two print statements showing `My first Python lab`
-and `I saved this file.` on separate lines. Predict the output before running.
+| Section in the file | What to write | Expected output |
+| --- | --- | --- |
+| A. NAME AND COURSE | Store `Alex` in `student_name` and `Python` in `course_name`. Print each variable on its own line. | Alex, then Python |
+| B. TEXT OR VARIABLE | Print the quoted text `"course_name"`, then print the variable `course_name`. | course_name, then Python |
+| C. A NEW VALUE | Store `Ready` in `status_message` and print it. Store `Finished` in the same variable and print it again. | Ready, then Finished |
 
-**B — Name and course.** Store a fictional name in `student_name` and `Python`
-in `course_name`. Print each variable on its own line. Change only the name's
-value, save, and rerun. The printed name should change without changing its
-print statement.
+Write these yourself. You may ask Copilot to explain one line if needed.
+Click **File → Save All**, then run `python variables.py` once. Check the six
+output lines against the table. Answer **question 3** in `LEARNING_LOG.md`.
 
-**C — Text versus a variable.** Print `"course_name"` and then `course_name`.
-Explain why their outputs differ.
+**Optional:** under **D. OPTIONAL INPUT**, replace the write-here comment with
+`colour = input("Favourite colour: ")` and `print(colour)` on separate lines.
+Save and run. When the program waits, type a colour **in the terminal** and press
+Enter. `input` gives you text, which is stored in `colour` and then printed.
 
-**D — A value changes.** Assign `"Ready"` to `status_message` and print it.
-Then assign `"Submitted"` to the same variable and print it again. Before
-running, predict both lines. Explain why they show different values.
+## 8. Upload and submit your finished work
 
-**Optional — Input as text.** Ask for a favourite colour with
-`colour = input("Favourite colour: ")`, then `print(colour)`. Save and run.
-When the program waits, type a colour **in the terminal** and press **Enter**.
-Run again with another colour. `input` returns the typed text and assignment
-stores it in `colour`. No number conversion is needed.
+1. Answer **question 4** in `LEARNING_LOG.md` after reading step 9 below.
+2. Click **File → Save All**. Your Python programs should have run successfully.
+3. Repeat the buttons in step 5: **Source Control → review changes → + beside
+   each changed assignment file → message → Commit → … → Push**.
+   This time include `print_practice.py`, `variables.py`, and `LEARNING_LOG.md`.
+   Use the message **Complete my first Python lab**.
+4. After Push finishes, check that **Changes** and **Staged Changes** are empty.
+   Empty lists alone do not prove upload: also perform the next check.
+5. Refresh GitHub. Open both Python files and `LEARNING_LOG.md`; check that the
+   completed sections and answers appear. Confirm the latest commit message is
+   **Complete my first Python lab**.
+6. Click that commit message to open the commit, then copy its browser URL.
+   Submit your **student code, repository URL, and final commit URL** in the
+   LMS/form specified by your instructor.
 
-Fill in the final variable answer in `LEARNING_LOG.md`. Use only short answers;
-your instructor may ask you to change one value and explain the result live.
+For a personal template copy, confirm your instructor accepted the collaborator
+invitation. Classroom 50 manages instructor access through the organization;
+this lab is intended to use submission on pushes to the default branch.
 
-## 9. Submit and check the online version
+## 9. Stop the Codespace safely
 
-1. Complete your learning log. Click **File → Save All**; check for unsaved dots.
-2. Run `python print_practice.py` and `python variables.py`. Check their outputs.
-3. Run `git status`, inspect the listed changes, and commit the intended files:
+Before leaving: **Save All → Commit → Push → check the completed files on GitHub**.
+Stopping a Codespace does not submit your work. Closing its browser tab does not
+stop it immediately.
 
-   ```bash
-   git add print_practice.py variables.py LEARNING_LOG.md
-   git commit -m "Complete print and variable exercises"
-   git push
-   git status
-   git log -1 --oneline
-   ```
+1. Open [Your Codespaces](https://github.com/codespaces).
+2. Find the name and repository of the Codespace you used.
+3. Click its **… → Stop codespace**. Check that it is stopped, then close the
+   editor tab. Choose Stop, not Delete.
+4. If you have other running Codespaces, open each one that might contain work.
+   Save, commit, push, and check its GitHub copy before stopping it. Each
+   Codespace has its own files; uploading from one does not save another's edits.
+   Ask for help if different versions or upload errors appear.
 
-4. Confirm `git push` succeeded. Afterward, `git status` should show a clean
-   working tree and no commits ahead of the remote branch. If it says
-   `nothing to commit`, you may already have committed: still run `git push`.
-5. Refresh your GitHub repository. Open both Python files and the learning log.
-   Confirm the latest commit message and code match the work in Codespaces.
-6. Click the latest commit to copy its link. Submit your **student code,
-   repository URL, and final commit URL** to the LMS/form your instructor specified.
-   For Classroom 50, this lab should be configured for submission on pushes to
-   the default branch; do not invent a tag or extra CLI submission step.
-7. For a personal template copy, confirm your instructor accepted the collaborator
-   invitation. For Classroom 50, instructor access is handled by the organization.
-
-Your terminal output is not automatically stored on GitHub. Your submitted code,
-learning log, and commit history are the evidence your instructor can read.
-
-## 10. Stop safely, manage extra Codespaces, and resume
-
-**Before ending work: Save All → run → commit → push → verify on GitHub.**
-There is no automatic guarantee that closing a tab has submitted your assignment.
-
-1. After the checks above, open [Your Codespaces](https://github.com/codespaces).
-2. Match the repository and Codespace name to the one you used.
-3. Click its **…** menu → **Stop codespace**. Confirm it is stopped before
-   closing the editor tab. Closing the tab alone leaves it running until timeout.
-4. If several Codespaces are running, inspect each one's repository and name.
-   Open each one that might contain work, save and commit/push its intended
-   changes, and verify its repository before stopping it through the same menu.
-   Do not assume pushing from one has saved another's uncommitted files. If their
-   work differs or a push is rejected, ask for help before combining it.
-5. Choose **Stop**, rather than **Delete**. Stopping pauses computing and retains
-   saved files, but storage still counts and stopped Codespaces can eventually
-   expire. Pushed commits are your durable copy on GitHub.
-6. Practise resuming: on Your Codespaces, click the same Codespace name and open
-   it in the browser. Find your files and rerun a program. Then stop it again
-   after checking there are no new edits or unpushed commits.
-
-You have finished when you can demonstrate saving, running, committing, pushing,
-checking GitHub, explaining a simple print/variable, reviewing a Copilot
-suggestion, and stopping/resuming the correct Codespace.
+To continue later, return to Your Codespaces and click the **same Codespace**.
+Stopping keeps saved files, but storage still counts and Codespaces can expire.
+Your pushed work remains in the GitHub repository.

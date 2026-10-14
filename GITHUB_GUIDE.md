@@ -1,6 +1,5 @@
-# GitHub quick reminder
+# Upload with buttons
 
-Follow the complete sequence in [README.md](README.md). This file adds no tasks.
-Save writes files in Codespaces; commit records selected changes; push sends
-commits to GitHub. Inspect Source Control, type the Git commands yourself, and
-refresh GitHub after pushing. A clean working tree alone does not prove upload.
+Follow README.md, step 5. Save All → Source Control → review files → + beside
+each file → type a message → Commit → … → Push. Refresh GitHub and inspect the
+uploaded code. Saving or committing alone does not upload your work.
