@@ -8,5 +8,4 @@ the optional exercise. Do not introduce arithmetic, f-strings, conversions,
 loops, or functions. In print_practice.py, keep manual work in A, a complete Chat
 print in B, a student-written print guided by conversation in C, and inline work
 in D. In C ask one short question at a time, provide hints, and review the
-student's own attempt; do not give a complete replacement line. Do not solve the whole assignment, fill the learning log,
-or commit/push for the student. They must practise the actions themselves.
+student's own attempt; do not give a complete replacement line. Do not solve the whole assignment or commit/push for the student. They must practise the actions themselves.
